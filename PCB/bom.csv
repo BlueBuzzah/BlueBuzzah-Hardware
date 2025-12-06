@@ -1,0 +1,11 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+A1,Adafruit_Feather_WithMountingHoles,1,Adafruit_Feather_Generic_mountingholes,
+"C1, C12, C13, C6, C7",0402,5,10u,
+"C10, C11, C4, C5",0402,4,1u,
+"C14, C2, C3, C8, C9",0402,5,0.1u,
+"R1, R10, R11, R12, R2, R3, R4, R5, R6, R7, R8, R9",0402,12,10k,
+S1,SW_EG1218,1,EG1218,
+"SP1, SP2, SP3, SP4, SP5, SP6, SP7, SP8",PAD-2.5X2.5,8,~,
+SW2,BTN_KMR2_4.6X2.8,1,KMR2,
+U1,SOP65P640X120-16N,1,TCA9546APWR,
+"U2, U3, U4, U5",VSSOP-10_3x3mm_P0.5mm,4,DRV2605LDGS,
