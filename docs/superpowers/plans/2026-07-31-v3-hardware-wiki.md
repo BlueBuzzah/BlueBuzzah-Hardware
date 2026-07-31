@@ -187,7 +187,11 @@ V2_ALLOWED = "Instructions/Blue Buzzah Build Documentation.pdf"
 V2_FORBIDDEN = re.compile(r"PCB/v2|archive/|BlueBuzzah 2\.0|Legacy[- ]v2", re.IGNORECASE)
 
 WIKILINK = re.compile(r"\[\[([^\]]+)\]\]")
-MDLINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+# Image embeds: ![alt](path). Relative paths under images/ are correct here and
+# resolve fine in GitHub wikis - check that the file exists rather than reject it.
+IMGLINK = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
+# Page links: [text](url), excluding image embeds via the negative lookbehind.
+MDLINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
 
 
 def check(wiki: Path) -> list[str]:
@@ -210,7 +214,16 @@ def check(wiki: Path) -> list[str]:
             if target.strip().lower() not in names:
                 errors.append(f"{page.name}: broken wikilink [[{target}]]")
 
+        images = set(IMGLINK.findall(text))
+        for src in images:
+            if src.startswith(("http://", "https://")):
+                continue
+            if not (wiki / src).is_file():
+                errors.append(f"{page.name}: missing image '{src}'")
+
         for url in MDLINK.findall(text):
+            if url in images:
+                continue
             if url.startswith(("http://", "https://", "#")):
                 continue
             errors.append(f"{page.name}: non-absolute link '{url}' "
@@ -594,10 +607,11 @@ The existing content is good and generation-neutral — keep it. Two edits: remo
 prerequisite line about tinning wire (that now lives in Part-3), and add a buzz-check step
 before the housing is closed, since dovetail assembly is difficult to reverse.
 
-- [ ] **Step 3: Update the images path if needed**
+- [ ] **Step 3: Confirm the images still resolve**
 
-The page references `images/lra-housing/`. Confirm those 22 files still resolve after the
-rename; the directory is untouched, so links should be unaffected.
+The page references 22 files under `images/lra-housing/` as relative paths, which is
+correct for a GitHub wiki. The directory is untouched by the rename, so they should still
+resolve — `wiki_check.py` verifies each one exists and will report `missing image` if not.
 
 - [ ] **Step 4: Run the check and commit**
 
