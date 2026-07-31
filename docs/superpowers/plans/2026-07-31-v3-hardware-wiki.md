@@ -339,9 +339,16 @@ expected at this stage.
 
 - [ ] **Step 6: Commit**
 
+Stage explicit paths — **never `git add -A` in the wiki repo.** It carries an uncommitted
+edit to `Acknowledgements.md` made by the repository owner outside this plan; sweeping it
+into an unrelated commit would publish unreviewed content. Leave that file alone; Task 4
+handles it.
+
 ```bash
 cd /Users/rbonestell/Development/BlueBuzzah/BlueBuzzah-Hardware.wiki
-git add -A
+git add _Sidebar.md Build-Status.md _Footer.md
+git add -u archive/
+git status --short   # confirm Acknowledgements.md is still unstaged
 git commit -m "docs: remove v2 archive, add sidebar and build status"
 ```
 
@@ -628,7 +635,8 @@ resolve — `wiki_check.py` verifies each one exists and will report `missing im
 cd /Users/rbonestell/Development/BlueBuzzah
 python3 BlueBuzzah-Hardware/tools/wiki_check.py BlueBuzzah-Hardware.wiki
 cd BlueBuzzah-Hardware.wiki
-git add -A
+git add Part-3-Building-the-Tactors.md
+git add -u Part-4-LRA-Housing-Assembly.md LRA-Housing-Assembly.md
 git commit -m "docs: add Part 3 tactor build, renumber housing assembly to Part 4"
 ```
 
@@ -691,7 +699,7 @@ Part-5 and Part-6 are the two pages most in need of photography. Flag both.
 cd /Users/rbonestell/Development/BlueBuzzah
 python3 BlueBuzzah-Hardware/tools/wiki_check.py BlueBuzzah-Hardware.wiki
 cd BlueBuzzah-Hardware.wiki
-git add -A
+git add Part-5-Mounting-Tactors-in-Glove-Fingertips.md Part-6-Wiring-the-Glove-Harness.md Build-Status.md
 git commit -m "docs: add Part 5 fingertip mounting and Part 6 harness wiring"
 ```
 
