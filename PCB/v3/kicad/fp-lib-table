@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "113991054")(type "KiCad")(uri "${KIPRJMOD}/Libraries/113991054")(options "")(descr ""))
+  (lib (name "KoreanHropartsElec")(type "KiCad")(uri "${KIPRJMOD}/Libraries/KoreanHropartsElec.pretty")(options "")(descr ""))
+  (lib (name "xiao_footprints")(type "KiCad")(uri "${KIPRJMOD}/Libraries/OPL_Kicad_Library-master/xiao_footprints")(options "")(descr ""))
+)
