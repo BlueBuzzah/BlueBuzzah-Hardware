@@ -19,7 +19,7 @@ Rebuild the public hardware wiki as a complete, end-to-end build guide for BlueB
 | Naming | "BlueBuzzah v3" throughout. "PentaBuzzer" / "Penta Buzzer mini V2.2" appears only where a builder needs it to locate design files. |
 | Design files | Copied into `BlueBuzzah-Hardware` so builders use one repo. |
 | Gaps | Explicit status callouts, aggregated on a `Build-Status` page. |
-| v2 owners | Not addressed by the wiki. No references, banners, or redirects. |
+| v2 owners | Formally supported by a single, deliberate exception: the wiki links to the archived v2 build PDF. See v2 Reference below. |
 
 ## Constraints
 
@@ -60,7 +60,8 @@ wiki would publish v3 pages alongside the v2 `archive/` pages this work exists t
 Seventeen live pages plus a sidebar. Numbered `Part-N-*` titles carry build order; the sidebar mirrors it.
 
 **Getting started**
-- `Home` — v3 landing, spec table, build-path overview
+- `Home` — v3 landing, spec table, build-path overview. Also carries the enclosure
+  limitation up top (before a reader spends money) and the single v2 PDF reference.
 - `Disclaimers` — existing, reviewed for v3 accuracy
 - `Acknowledgements` — existing, reviewed
 - `Build-Status` — new; single tracker for every open item
@@ -105,7 +106,8 @@ LRA is soldered, any housing is glued, and any glove fingertip is cut.
 **Reference**
 - `Parts-and-Tools-List` — rebuilt from the v3 BOM; includes a refreshed cost estimate
   (v2's figure is invalid — the v3 BOM and JLCPCB assembly scope both changed) and
-  per-step quantities that reconcile against each `Part-N` page
+  per-step quantities that reconcile against each `Part-N` page. Carries the second v2 PDF
+  reference, for readers who discover here that they have the earlier board.
 - `Troubleshooting` — new
 - `_Sidebar` — new; the wiki currently has no navigation
 - `_Footer` — existing, one line; reviewed for v3 accuracy, otherwise untouched
@@ -131,6 +133,28 @@ marked critical get prominent callouts rather than inline mentions.
 | IMU | LSM6DS3 populated but unused by current firmware | BOM `U1` |
 | Charging | ⚠️ No charge IC appears in the v3 BOM; charging is presumably via the XIAO ESP32-S3's onboard LiPo charger over USB-C. Must be confirmed on hardware before it is documented. | BOM (absence) |
 | Software | PlatformIO firmware, BuzzahBuddy app, BlueBuzzah-Updater | firmware repo |
+
+## v2 Reference
+
+v2 is not dormant — the firmware still actively builds `adafruit_feather_nrf52840`, and
+there are v2 gloves in the field. Those owners stay formally supported.
+
+The wiki carries **one** v2 reference: a short, clearly-labeled pointer to the archived
+build PDF at `BlueBuzzah-Hardware/Instructions/Blue Buzzah Build Documentation.pdf`. It
+appears in two places — a line on `Home` so someone landing on the wiki with v2 hardware
+is not stranded, and an entry in `Parts-and-Tools-List` where a reader is most likely to
+realize they have the earlier board.
+
+Deliberate limits, so this does not grow back into a parallel v2 guide:
+
+- It is a **link to a PDF**, not wiki content. No v2 build pages are recreated, and no v2
+  steps, parts, or wiring appear in any wiki page.
+- It is stated as historical reference for existing hardware, not an alternative build
+  path. Nobody should read it as an invitation to build a v2 glove today.
+- The PDF is already committed at that path and stays there. This adds no new asset.
+
+The PDF is the only sanctioned v2 reference. Everything else v2 stays out, per the
+link-check rule below.
 
 ## Enclosure Gap
 
@@ -199,10 +223,13 @@ The existing v2 assets stay in place and untouched. The wiki links to neither th
 1. **Claim traceability** — every electrical and mechanical claim cites its source file,
    BOM row, or schematic net, delivered as a review table for spot-checking.
 2. **Link check** — automated pass over all `[[wikilinks]]` and repo-relative paths, run
-   before merge. It must do two things, not one: resolve every new `PCB/v3/` link, **and
-   fail on any `PCB/v2` path, `archive/` reference, or v2-named page link** appearing in
-   wiki content. The second half is what keeps "no public v2 content" true over time
-   rather than only on merge day.
+   before merge. It must do three things: resolve every new `PCB/v3/` link; **fail on any
+   `PCB/v2` path, `archive/` reference, or v2-named page link** appearing in wiki content;
+   and **allow exactly one exception** — the link to
+   `Instructions/Blue Buzzah Build Documentation.pdf`, which must also be verified to
+   resolve. The exception is allowlisted by exact path, not by pattern, so a broader v2
+   reference cannot slip through under it. This is what keeps the v2 surface at precisely
+   one sanctioned link over time rather than only on merge day.
 3. **Procedural dry-run** — a sequential read of Part-1 through Part-9 as a builder would
    follow them, checking for missing steps, steps that depend on something not yet done,
    and tools or parts used but never introduced. The fact checks above catch wrong claims;
@@ -216,6 +243,11 @@ The existing v2 assets stay in place and untouched. The wiki links to neither th
 
 - Designing the enclosure.
 - Producing build photography.
-- Any v2 documentation, migration path, or owner communication.
+- Any v2 documentation beyond the single sanctioned PDF link — no v2 build pages,
+  migration path, or owner communication.
+- LiPo safety, charging, handling, and disposal guidance. This gap exists in the current
+  wiki and is not introduced by this work; the user has scoped it out for now. Note that
+  `Part-8` still documents the mechanics of first charge — what is excluded is
+  battery-safety guidance as a subject.
 - Fixing the stale v2 battery-monitoring row in the firmware README. It contradicts the
   section below it and should be corrected, but in the firmware repo, not here.
