@@ -523,6 +523,15 @@ Role assignment: one glove `SET_ROLE:PRIMARY`, the other `SET_ROLE:SECONDARY`. B
 need firmware; they are not interchangeable once roles are set. Record which physical board
 got which role — it determines hand assignment in Part-5.
 
+**Do not duplicate the Updater's own documentation.** It has a wiki already; link to it
+and keep this page focused on what a *builder* needs at this point in the build:
+
+- https://github.com/BlueBuzzah/BlueBuzzah-Updater/wiki/Getting-Started — installing the Updater
+- https://github.com/BlueBuzzah/BlueBuzzah-Updater/wiki/Understanding-Device-Roles — what PRIMARY/SECONDARY mean
+
+Also state here that the Updater is the same tool and workflow used for **future firmware
+updates**, not just this first flash — so nobody assumes it is a one-time build step.
+
 - [ ] **Step 2: Write the smoke-test section**
 
 State the power requirement first, as its own callout — it is the single most common
@@ -751,7 +760,11 @@ Must cover all of:
    hands (set back in Part-2, physically assigned in Part-5).
 3. Verifying bilateral sync, and what to do when it fails.
 4. Adjusting intensity and therapy profile settings through the app.
-5. Updating firmware after the initial build, via BlueBuzzah-Updater.
+5. Updating firmware after the initial build, via BlueBuzzah-Updater — link to
+   https://github.com/BlueBuzzah/BlueBuzzah-Updater/wiki/User-Guide rather than restating
+   it, and to
+   https://github.com/BlueBuzzah/BlueBuzzah-Updater/wiki/Therapy-Profiles for profile
+   details. The Updater wiki owns that content; this page owns the build context around it.
 
 - [ ] **Step 2: Scope the page to bench and desk use**
 
