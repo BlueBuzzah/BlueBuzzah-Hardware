@@ -13,6 +13,12 @@ V2_ALLOWED = "Instructions/Blue Buzzah Build Documentation.pdf"
 # Anything else v2-ish is a failure.
 V2_FORBIDDEN = re.compile(r"PCB/v2|archive/|BlueBuzzah 2\.0|Legacy[- ]v2", re.IGNORECASE)
 
+# GitHub alert marker lines, e.g. "> [!NOTE]". Captures the bang-token and
+# anything trailing it on the same line (which must be empty, or the alert
+# silently renders as a plain blockquote instead of an alert).
+ALERT_MARKER = re.compile(r"^>\s*\[!([^\]]*)\](.*)$")
+ALERT_TYPES = {"NOTE", "TIP", "IMPORTANT", "WARNING", "CAUTION"}
+
 WIKILINK = re.compile(r"\[\[([^\]]+)\]\]")
 # Image embeds: ![alt](path). Relative paths under images/ are correct here and
 # resolve fine in GitHub wikis - check that the file exists rather than reject it.
@@ -36,6 +42,16 @@ def check(wiki: Path) -> list[str]:
             stripped = line.replace(V2_ALLOWED, "")
             if V2_FORBIDDEN.search(stripped):
                 errors.append(f"{page.name}:{line_no}: forbidden v2 reference")
+
+            alert = ALERT_MARKER.match(line)
+            if alert:
+                token, trailing = alert.group(1), alert.group(2)
+                if token not in ALERT_TYPES:
+                    errors.append(f"{page.name}:{line_no}: malformed alert type "
+                                  f"'[!{token}]' - must be one of {sorted(ALERT_TYPES)}")
+                if trailing.strip():
+                    errors.append(f"{page.name}:{line_no}: alert marker has body text "
+                                  "on the same line - must be on its own line")
 
         for target in WIKILINK.findall(text):
             if target.strip().lower() not in names:
