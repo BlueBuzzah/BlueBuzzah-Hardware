@@ -20,16 +20,17 @@ timed vibration patterns to the fingertips. Each glove requires:
 - **Enclosure** — the v3 wearable enclosure has not been designed yet; see the
   wiki's Build Status page for the current state of the build
 
-The board arrives fully assembled from JLCPCB's SMT service — the only soldering
-in the whole build is a handful of fine wires onto the LRA terminals.
+The board arrives fully assembled from JLCPCB's SMT service, and the tactor's
+wire-to-LRA connection is a friction fit made by a 3D-printed wire plug — there
+is no soldering anywhere in the build.
 
 ## Repository Contents
 
-| Folder                                   | Description                                                        |
-| ---------------------------------------- | ----------------------------------------------------------------- |
-| **[PCB/v3/](PCB/v3/)**                   | Gerbers, BOM, pick-and-place (CPL), and KiCad sources for the v3 board |
-| **[3D-Print-Models/](3D-Print-Models/)** | 3D model of the v3 board (`.step`)                                 |
-| **[archive/](archive/)**                 | Deprecated v2 hardware files, kept for historical reference only   |
+| Folder | Description |
+| --- | --- |
+| **[PCB/v3/](PCB/v3/)** | Gerbers, BOM, pick-and-place (CPL), and KiCad sources for the v3 board |
+| **[3D-Print-Models/](3D-Print-Models/)** | 3D model of the v3 board (`.step`) |
+| **[archive/](archive/)** | Deprecated v2 hardware files, kept for historical reference only |
 
 ## Getting Started
 
