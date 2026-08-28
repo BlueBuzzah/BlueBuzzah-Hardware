@@ -7,11 +7,14 @@ import re
 import sys
 from pathlib import Path
 
-# The single sanctioned v2 reference, allowlisted by exact path, not pattern.
-V2_ALLOWED = "Instructions/Blue Buzzah Build Documentation.pdf"
-
-# Anything else v2-ish is a failure.
-V2_FORBIDDEN = re.compile(r"PCB/v2|archive/|BlueBuzzah 2\.0|Legacy[- ]v2", re.IGNORECASE)
+# The wiki may keep v2 context where it steers a v3 builder away from a mistake
+# (e.g. "the old ABS case won't fit"), but must not LINK to the deprecated v2
+# build PDF or the earlier-generation build video.
+V2_FORBIDDEN = re.compile(
+    r"PCB/v2|archive/|BlueBuzzah 2\.0|Legacy[- ]v2"
+    r"|Build Documentation\.pdf|youtu\.be/fcnbQDe73uA",
+    re.IGNORECASE,
+)
 
 # GitHub alert marker lines, e.g. "> [!NOTE]". Captures the bang-token and
 # anything trailing it on the same line (which must be empty, or the alert
@@ -39,8 +42,7 @@ def check(wiki: Path) -> list[str]:
         text = page.read_text(encoding="utf-8")
 
         for line_no, line in enumerate(text.splitlines(), 1):
-            stripped = line.replace(V2_ALLOWED, "")
-            if V2_FORBIDDEN.search(stripped):
+            if V2_FORBIDDEN.search(line):
                 errors.append(f"{page.name}:{line_no}: forbidden v2 reference")
 
             alert = ALERT_MARKER.match(line)

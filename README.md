@@ -2,45 +2,60 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-Hardware design files for BlueBuzzah, a medical device research platform implementing vibrotactile Coordinated Reset (vCR) therapy for Parkinson's disease treatment. This repository contains everything needed to manufacture the physical components: PCB fabrication files, 3D-printable enclosure models, and complete build documentation.
+Hardware design files for BlueBuzzah v3, a medical device research platform
+implementing vibrotactile Coordinated Reset (vCR) therapy for Parkinson's
+disease research. This repository contains the files needed to manufacture the
+physical components: PCB fabrication files, the board 3D model, and links to the
+full build documentation.
 
 ## Overview
 
-BlueBuzzah consists of two synchronized haptic gloves that deliver precisely timed vibration patterns to fingers. Each glove requires:
+BlueBuzzah consists of two synchronized haptic gloves that deliver precisely
+timed vibration patterns to the fingertips. Each glove requires:
 
-- **Custom PCB** with Feather nRF52840 microcontroller, DRV2605 haptic drivers, and LRA motors
-- **3D-printed enclosure** housing the electronics and tactors
+- **Custom PCB** built around the Seeed XIAO ESP32-S3 (MCU + BLE), with five
+  DRV2605L haptic drivers, a TCA9548A I2C multiplexer, an LSM6DS3 IMU, a
+  WS2812B status LED, and five LRA motors (index, middle, ring, pinky, thumb)
 - **Firmware** from the [BlueBuzzah-Firmware](https://github.com/BlueBuzzah/BlueBuzzah-Firmware) repository
+- **Enclosure** — the v3 wearable enclosure has not been designed yet; see the
+  wiki's Build Status page for the current state of the build
+
+The board arrives fully assembled from JLCPCB's SMT service — the only soldering
+in the whole build is a handful of fine wires onto the LRA terminals.
 
 ## Repository Contents
 
-| Folder                                   | Description                                                       |
+| Folder                                   | Description                                                        |
 | ---------------------------------------- | ----------------------------------------------------------------- |
-| **[Instructions/](Instructions/)**       | Complete build documentation                                      |
-| **[3D-Print-Models/](3D-Print-Models/)** | STL files for the enclosure and tactor housings                   |
-| **[PCB/](PCB/)**                         | Gerber files, BOM, and pick-and-place positions for manufacturing |
+| **[PCB/v3/](PCB/v3/)**                   | Gerbers, BOM, pick-and-place (CPL), and KiCad sources for the v3 board |
+| **[3D-Print-Models/](3D-Print-Models/)** | 3D model of the v3 board (`.step`)                                 |
+| **[archive/](archive/)**                 | Deprecated v2 hardware files, kept for historical reference only   |
 
 ## Getting Started
 
-**[Download the Build Documentation (PDF)](Instructions/Blue%20Buzzah%20Build%20Documentation.pdf)** for complete step-by-step assembly instructions.
+The complete, step-by-step build guide lives in the
+**[BlueBuzzah-Hardware wiki](https://github.com/BlueBuzzah/BlueBuzzah-Hardware/wiki)** —
+start there before ordering parts.
 
 ### Manufacturing the PCB
 
-The `PCB/` folder contains all files needed for PCB fabrication:
+The [`PCB/v3/`](PCB/v3/) folder contains everything needed for fabrication and
+assembly:
 
-- `Bluetooth_4-ch_Buzzah_v2.0_-_2-layer_v4.zip` - Gerber files for PCB manufacturing
-- `bom.csv` - Bill of materials with component specifications
-- `positions.csv` - Pick-and-place positions for SMT assembly
-- `netlist.ipc` - IPC netlist for verification
+- `jlc_pcb_gerbers.zip` — Gerber files for PCB manufacturing
+- `BOM_JCLPCB_Penta_Buzzer_mini_V2_2_single_side.csv` — bill of materials
+- `CPL_JLCPCB_Penta_Buzzer_mini_V2_2_single_side-all-pos.csv` — pick-and-place positions
+- `kicad/` — KiCad schematic and PCB source files
 
-Upload the Gerber zip to your preferred PCB manufacturer (JLCPCB, PCBWay, OSH Park, etc.).
-
-### 3D Printing the Enclosure
-
-The `3D-Print-Models/` folder contains STL files ready for slicing. Recommended print settings are detailed in the build documentation.
+Upload the Gerber zip, BOM, and CPL to JLCPCB's SMT assembly service to order the
+board fully assembled. See the wiki's "Ordering the PCB" page for details.
+(The files carry the KiCad project's internal name "Penta Buzzer mini V2.2" —
+that is a filename, not the product version. This is the current BlueBuzzah v3
+board.)
 
 ## Related Repositories
 
+- **[BlueBuzzah-Firmware](https://github.com/BlueBuzzah/BlueBuzzah-Firmware)** - Firmware for the BlueBuzzah gloves.
 - **[BlueBuzzah-Updater](https://github.com/BlueBuzzah/BlueBuzzah-Updater)** - Desktop application for updating and configuring BlueBuzzah devices.
 
 ## License
