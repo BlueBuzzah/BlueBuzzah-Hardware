@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('KiCad electronic assembly'),'2;1');
-FILE_NAME('Penta_Buzzer_mini_V2_2_single_side.step',
+FILE_NAME('BlueBuzzah_v3.step',
   '2026-03-11T21:18:19',('Pcbnew'),('Kicad'),
   'Open CASCADE STEP processor 7.9','KiCad to STEP converter','Unknown'
   );
@@ -16,8 +16,8 @@ DATA;
 #4 = PRODUCT_DEFINITION_SHAPE('','',#5);
 #5 = PRODUCT_DEFINITION('design','',#6,#9);
 #6 = PRODUCT_DEFINITION_FORMATION('','',#7);
-#7 = PRODUCT('Penta_Buzzer_mini_V2_2_single_side 1',
-  'Penta_Buzzer_mini_V2_2_single_side 1','',(#8));
+#7 = PRODUCT('BlueBuzzah_v3 1',
+  'BlueBuzzah_v3 1','',(#8));
 #8 = PRODUCT_CONTEXT('',#2,'mechanical');
 #9 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #10 = SHAPE_REPRESENTATION('',(#11,#15,#19,#23,#27,#31,#35,#39,#43,#47,
@@ -35935,8 +35935,8 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #34612 = PRODUCT_DEFINITION_SHAPE('','',#34613);
 #34613 = PRODUCT_DEFINITION('design','',#34614,#34617);
 #34614 = PRODUCT_DEFINITION_FORMATION('','',#34615);
-#34615 = PRODUCT('Penta_Buzzer_mini_V2_2_single_side_pad',
-  'Penta_Buzzer_mini_V2_2_single_side_pad','',(#34616));
+#34615 = PRODUCT('BlueBuzzah_v3_pad',
+  'BlueBuzzah_v3_pad','',(#34616));
 #34616 = PRODUCT_CONTEXT('',#2,'mechanical');
 #34617 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #34618 = SHAPE_REPRESENTATION('',(#11,#34619,#34909,#35199,#35489,#35779
@@ -104069,8 +104069,8 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #102065 = PRODUCT_DEFINITION_SHAPE('','',#102066);
 #102066 = PRODUCT_DEFINITION('design','',#102067,#102070);
 #102067 = PRODUCT_DEFINITION_FORMATION('','',#102068);
-#102068 = PRODUCT('Penta_Buzzer_mini_V2_2_single_side_silkscreen',
-  'Penta_Buzzer_mini_V2_2_single_side_silkscreen','',(#102069));
+#102068 = PRODUCT('BlueBuzzah_v3_silkscreen',
+  'BlueBuzzah_v3_silkscreen','',(#102069));
 #102069 = PRODUCT_CONTEXT('',#2,'mechanical');
 #102070 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #102071 = SHAPE_REPRESENTATION('',(#11,#102072,#102330,#102373,#102467,
@@ -155494,8 +155494,8 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #152281 = PRODUCT_DEFINITION_SHAPE('','',#152282);
 #152282 = PRODUCT_DEFINITION('design','',#152283,#152286);
 #152283 = PRODUCT_DEFINITION_FORMATION('','',#152284);
-#152284 = PRODUCT('Penta_Buzzer_mini_V2_2_single_side_PCB',
-  'Penta_Buzzer_mini_V2_2_single_side_PCB','',(#152285));
+#152284 = PRODUCT('BlueBuzzah_v3_PCB',
+  'BlueBuzzah_v3_PCB','',(#152285));
 #152285 = PRODUCT_CONTEXT('',#2,'mechanical');
 #152286 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #152287 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#152288),#153169);

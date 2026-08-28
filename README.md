@@ -44,15 +44,12 @@ The [`PCB/v3/`](PCB/v3/) folder contains everything needed for fabrication and
 assembly:
 
 - `jlc_pcb_gerbers.zip` — Gerber files for PCB manufacturing
-- `BOM_JCLPCB_Penta_Buzzer_mini_V2_2_single_side.csv` — bill of materials
-- `CPL_JLCPCB_Penta_Buzzer_mini_V2_2_single_side-all-pos.csv` — pick-and-place positions
+- `BOM_JCLPCB_BlueBuzzah_v3.csv` — bill of materials
+- `CPL_JLCPCB_BlueBuzzah_v3-all-pos.csv` — pick-and-place positions
 - `kicad/` — KiCad schematic and PCB source files
 
 Upload the Gerber zip, BOM, and CPL to JLCPCB's SMT assembly service to order the
 board fully assembled. See the wiki's "Ordering the PCB" page for details.
-(The files carry the KiCad project's internal name "Penta Buzzer mini V2.2" —
-that is a filename, not the product version. This is the current BlueBuzzah v3
-board.)
 
 ## Related Repositories
 

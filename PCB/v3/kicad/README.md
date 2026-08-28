@@ -4,10 +4,9 @@ The KiCad schematic and PCB design source for the BlueBuzzah v3 board, provided 
 
 ## Contents
 
-- `Penta_Buzzer_mini_V2_2_single_side.kicad_pro` - KiCad project file
-- `Penta_Buzzer_mini_V2_2_single_side.kicad_sch` - top-level schematic
-- `Buzzer_Drivers.kicad_sch` - haptic driver sub-schematic
-- `Penta_Buzzer_mini_V2_2_single_side.kicad_pcb` - PCB layout
+- `*.kicad_pro` - KiCad project file
+- `*.kicad_sch` - top-level schematic, plus `Buzzer_Drivers.kicad_sch` (haptic driver sub-schematic)
+- `*.kicad_pcb` - PCB layout
 - `fp-lib-table`, `sym-lib-table` - KiCad library table references
 
 ## Important: This Project Will Not Open Cleanly

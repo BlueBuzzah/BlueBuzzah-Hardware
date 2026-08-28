@@ -7,8 +7,8 @@ Fabrication-ready files for the BlueBuzzah v3 PCB.
 | File                                                             | Description                                     |
 | ------------------------------------------------------------------ | ------------------------------------------------ |
 | `jlc_pcb_gerbers.zip`                                             | Gerber files for PCB manufacturing              |
-| `BOM_JCLPCB_Penta_Buzzer_mini_V2_2_single_side.csv`               | Bill of materials with component specifications |
-| `CPL_JLCPCB_Penta_Buzzer_mini_V2_2_single_side-all-pos.csv`       | Pick-and-place positions for SMT assembly       |
+| `BOM_JCLPCB_BlueBuzzah_v3.csv`                                    | Bill of materials with component specifications |
+| `CPL_JLCPCB_BlueBuzzah_v3-all-pos.csv`                            | Pick-and-place positions for SMT assembly       |
 | **[kicad/](kicad/)**                                              | KiCad schematic and PCB source files            |
 
 ## Ordering the Board
