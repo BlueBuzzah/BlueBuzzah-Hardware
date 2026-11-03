@@ -1,0 +1,64 @@
+{
+ "dir": [
+  1.2,
+  -1.6,
+  1.1
+ ],
+ "fill": 0.86,
+ "margin": 0.05,
+ "glb": "{work}/pcb/BlueBuzzah_v3.glb",
+ "remove": [
+  "SW_CK_JS202011AQN_DPDT_Angled"
+ ],
+ "parts": "{work}/xiao",
+ "stl_scale": 0.001,
+ "default": "#000000",
+ "mats": {
+  "xiao-pcb": [
+   "#1C1C1E",
+   0.0,
+   0.55
+  ],
+  "xiao-gold": [
+   "#D8B465",
+   1.0,
+   0.35
+  ],
+  "xiao-shield": [
+   "#D9DBDD",
+   0.3,
+   0.45
+  ],
+  "xiao-metal": [
+   "#C2C5C9",
+   1.0,
+   0.3
+  ],
+  "xiao-black": [
+   "#141416",
+   0.0,
+   0.6
+  ],
+  "xiao-button": [
+   "#4A4E55",
+   0.2,
+   0.5
+  ],
+  "xiao-ufl": [
+   "#CDBB8C",
+   1.0,
+   0.35
+  ]
+ },
+ "w": 2400,
+ "samples": 192,
+ "builds": [
+  {
+   "file": "{scripts}/builders/switch.py"
+  }
+ ],
+ "out": "{out}/images/v3/main-parts/bluebuzzah-v3-pcb.png",
+ "web_width": 1800,
+ "model": "{out}/models/bluebuzzah-v3-pcb.glb",
+ "model_scale": 1
+}

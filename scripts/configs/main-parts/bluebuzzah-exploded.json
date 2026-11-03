@@ -1,0 +1,201 @@
+{
+ "dir": [
+  1.2,
+  -1.6,
+  1.1
+ ],
+ "fill": 0.86,
+ "margin": 0.05,
+ "glb": "{work}/pcb/BlueBuzzah_v3.glb",
+ "remove": [
+  "SW_CK_JS202011AQN_DPDT_Angled"
+ ],
+ "parts": "{work}/bbx",
+ "stl_scale": 0.001,
+ "default": "#4A5468",
+ "mats": {
+  "xiao-pcb": [
+   "#1C1C1E",
+   0.0,
+   0.55
+  ],
+  "xiao-gold": [
+   "#D8B465",
+   1.0,
+   0.35
+  ],
+  "xiao-shield": [
+   "#D9DBDD",
+   0.3,
+   0.45
+  ],
+  "xiao-metal": [
+   "#C2C5C9",
+   1.0,
+   0.3
+  ],
+  "xiao-black": [
+   "#141416",
+   0.0,
+   0.6
+  ],
+  "xiao-button": [
+   "#4A4E55",
+   0.2,
+   0.5
+  ],
+  "xiao-ufl": [
+   "#CDBB8C",
+   1.0,
+   0.35
+  ]
+ },
+ "glb_loc": [
+  -0.1487,
+  0.0825,
+  0.087
+ ],
+ "glb_group": "pcb",
+ "offsets": {
+  "xiao-pcb": [
+   -0.1487,
+   0.0825,
+   0.087
+  ],
+  "xiao-gold": [
+   -0.1487,
+   0.0825,
+   0.087
+  ],
+  "xiao-shield": [
+   -0.1487,
+   0.0825,
+   0.087
+  ],
+  "xiao-metal": [
+   -0.1487,
+   0.0825,
+   0.087
+  ],
+  "xiao-black": [
+   -0.1487,
+   0.0825,
+   0.087
+  ],
+  "xiao-button": [
+   -0.1487,
+   0.0825,
+   0.087
+  ],
+  "xiao-ufl": [
+   -0.1487,
+   0.0825,
+   0.087
+  ],
+  "lower-shell": [
+   0,
+   0,
+   0
+  ],
+  "switch": [
+   0,
+   0,
+   0.16
+  ],
+  "upper-shell": [
+   0,
+   0,
+   0.2
+  ]
+ },
+ "part_groups": {
+  "xiao-pcb": "pcb",
+  "xiao-gold": "pcb",
+  "xiao-shield": "pcb",
+  "xiao-metal": "pcb",
+  "xiao-black": "pcb",
+  "xiao-button": "pcb",
+  "xiao-ufl": "pcb"
+ },
+ "w": 2400,
+ "samples": 160,
+ "band": 118,
+ "builds": [
+  {
+   "file": "{scripts}/builders/switch.py",
+   "group": "pcb",
+   "xform": {
+    "loc": [
+     -0.1487,
+     0.0825,
+     0.087
+    ]
+   }
+  },
+  {
+   "file": "{scripts}/builders/battery.py",
+   "group": "battery",
+   "cfg": {
+    "wire_len": 12.0
+   },
+   "xform": {
+    "rot_z": 270,
+    "scale": 0.001,
+    "loc": [
+     -0.0148,
+     0.0203,
+     0.047
+    ]
+   }
+  },
+  {
+   "file": "{scripts}/builders/antenna.py",
+   "group": "antenna",
+   "cfg": {
+    "cable_len": 20.0
+   },
+   "xform": {
+    "scale": 0.001,
+    "loc": [
+     0.075,
+     0.045,
+     0.183
+    ]
+   }
+  },
+  {
+   "file": "{scripts}/builders/screw.py",
+   "group": "screws",
+   "cfg": {
+    "at": [
+     [
+      -17.4,
+      32.4,
+      0
+     ],
+     [
+      10.9,
+      7.5,
+      0
+     ]
+    ]
+   },
+   "xform": {
+    "scale": 0.001,
+    "loc": [
+     0,
+     0,
+     0.128
+    ]
+   }
+  }
+ ],
+ "labels": {
+  "spec": "{scripts}/labels/bluebuzzah.json",
+  "out": "{out}/images/v3/main-parts/bluebuzzah-exploded-labeled.png"
+ },
+ "out": "{out}/images/v3/main-parts/bluebuzzah-exploded.png",
+ "web_width": 1800,
+ "model": "{out}/models/bluebuzzah-exploded.glb",
+ "model_scale": 1
+}

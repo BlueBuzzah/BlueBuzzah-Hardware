@@ -1,0 +1,23 @@
+{
+ "dir": [
+  1.2,
+  -1.6,
+  1.1
+ ],
+ "fill": 0.86,
+ "margin": 0.05,
+ "spec": 0.05,
+ "colors": {
+  "Finger cup": "#0059D6"
+ },
+ "default": "#4A5468",
+ "parts": "{work}/tactor",
+ "only": [
+  "Finger sled"
+ ],
+ "w": 1600,
+ "samples": 160,
+ "out": "{out}/images/v3/tactor-parts/finger-support.png",
+ "web_width": 900,
+ "model": "{out}/models/finger-support.glb"
+}

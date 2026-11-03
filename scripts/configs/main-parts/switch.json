@@ -1,0 +1,21 @@
+{
+ "dir": [
+  1.2,
+  -1.6,
+  1.1
+ ],
+ "fill": 0.86,
+ "margin": 0.05,
+ "spec": 0.05,
+ "colors": {},
+ "default": "#4A5468",
+ "parts": "{work}/case",
+ "only": [
+  "switch"
+ ],
+ "w": 1600,
+ "samples": 160,
+ "out": "{out}/images/v3/main-parts/switch.png",
+ "web_width": 900,
+ "model": "{out}/models/switch.glb"
+}

@@ -1,0 +1,20 @@
+{
+ "dir": [
+  0.35,
+  -0.6,
+  2.0
+ ],
+ "fill": 0.86,
+ "margin": 0.05,
+ "spec": 0.05,
+ "default": "#4A5468",
+ "w": 1600,
+ "samples": 160,
+ "web_width": 900,
+ "models": [
+  {
+   "model": "shell"
+  }
+ ],
+ "out": "{out}/images/v3/assembly/tactor-shell-pins.png"
+}
