@@ -29,7 +29,8 @@ is no soldering anywhere in the build.
 | Folder | Description |
 | --- | --- |
 | **[PCB/v3/](PCB/v3/)** | Gerbers, BOM, pick-and-place (CPL), and KiCad sources for the v3 board |
-| **[3D-Print-Models/](3D-Print-Models/)** | 3D model of the v3 board (`.step`) |
+| **[models/](models/)** | CAD files for the board, tactor and case (`.step`, `.3mf`), and the `.glb` models used for the build guide's images |
+| **[scripts/](scripts/)** | Headless Blender scripts that render the build guide's images from those models; see its [README](scripts/README.md) |
 | **[archive/](archive/)** | Deprecated v2 hardware files, kept for historical reference only |
 
 ## Getting Started

@@ -1,0 +1,12 @@
+{
+ "dir": [1.2, -1.6, 1.1], "fill": 0.86, "margin": 0.05, "spec": 0.05, "default": "#4A5468",
+ "w": 1600, "samples": 160, "web_width": 900,
+ "models": [
+  {"model": "lower-shell"},
+  {"model": "upper-shell"},
+  {"model": "switch"},
+  {"model": "bluebuzzah-v3-pcb", "name": "pcb", "loc": [-148.7, 82.5, 7.0]}
+ ],
+ "hook": "{scripts}/configs/assembly/case-strapped.py",
+ "out": "{out}/images/v3/assembly/case-strapped.png"
+}

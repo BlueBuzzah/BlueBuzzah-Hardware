@@ -1,0 +1,10 @@
+{
+ "dir": [0, -0.35, 2], "fill": 0.86, "margin": 0.05, "spec": 0.05, "default": "#4A5468",
+ "w": 2400, "samples": 160, "web_width": 1800,
+ "models": [
+  {"model": "bluebuzzah-v3-pcb", "name": "pcb", "rot": [0, 0, -90]}
+ ],
+ "hook": "{scripts}/configs/assembly/board-ports-labeled.py",
+ "labels": {"spec": "{scripts}/labels/board-ports-labeled.json", "out": "{out}/images/v3/assembly/board-ports-labeled.png"},
+ "out": "{work}/board-ports-labeled-base.png"
+}

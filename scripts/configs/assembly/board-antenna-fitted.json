@@ -1,0 +1,41 @@
+{
+ "dir": [
+  1.0,
+  -1.2,
+  1.8
+ ],
+ "fill": 0.86,
+ "margin": 0.3,
+ "spec": 0.05,
+ "default": "#4A5468",
+ "w": 1600,
+ "samples": 160,
+ "web_width": 900,
+ "models": [
+  {
+   "model": "bluebuzzah-v3-pcb",
+   "name": "pcb",
+   "loc": [
+    -148.7,
+    82.5,
+    0
+   ]
+  },
+  {
+   "model": "antenna",
+   "name": "antenna",
+   "rot": [
+    0,
+    0,
+    180
+   ],
+   "loc": [
+    -47.28,
+    19.31,
+    2.2
+   ]
+  }
+ ],
+ "out": "{out}/images/v3/assembly/board-antenna-fitted.png",
+ "hook": "{scripts}/configs/assembly/board-antenna-fitted.py"
+}

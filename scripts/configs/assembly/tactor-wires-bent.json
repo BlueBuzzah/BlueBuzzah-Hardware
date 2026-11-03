@@ -1,0 +1,50 @@
+{
+ "dir": [
+  1.0,
+  -1.4,
+  1.6
+ ],
+ "fill": 0.86,
+ "margin": 0.05,
+ "spec": 0.05,
+ "default": "#4A5468",
+ "w": 1600,
+ "samples": 160,
+ "web_width": 900,
+ "models": [
+  {
+   "model": "wire-plug",
+   "name": "plug",
+   "rot": [
+    0,
+    180,
+    0
+   ],
+   "loc": [
+    0,
+    0,
+    4.0
+   ]
+  },
+  {
+   "model": "wire-lead",
+   "name": "lead",
+   "rot": [
+    -90,
+    0,
+    0
+   ],
+   "loc": [
+    0,
+    5.1,
+    5.26
+   ],
+   "hide": [
+    "ph-",
+    "contact"
+   ]
+  }
+ ],
+ "hook": "{scripts}/configs/assembly/tactor-wires-bent.py",
+ "out": "{out}/images/v3/assembly/tactor-wires-bent.png"
+}

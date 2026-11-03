@@ -7,3 +7,7 @@ __pycache__/
 
 .superpowers
 docs/superpowers
+# Renders (published as WebP on BlueBuzzah.com)
+images/
+
+.claude/worktrees/
