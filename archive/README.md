@@ -6,7 +6,7 @@ nRF52840, 4-channel board). They are kept for historical reference only and are
 
 **Do not use these files for a new build.** The current hardware is BlueBuzzah
 v3 — see [`PCB/v3/`](../PCB/v3/) and the
-[BlueBuzzah-Hardware wiki](https://github.com/BlueBuzzah/BlueBuzzah-Hardware/wiki).
+[build guide](https://bluebuzzah.com/docs/).
 
 | File | Description |
 | --- | --- |

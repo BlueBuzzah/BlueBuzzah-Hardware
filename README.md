@@ -34,9 +34,9 @@ is no soldering anywhere in the build.
 
 ## Getting Started
 
-The complete, step-by-step build guide lives in the
-**[BlueBuzzah-Hardware wiki](https://github.com/BlueBuzzah/BlueBuzzah-Hardware/wiki)** —
-start there before ordering parts.
+The complete, step-by-step build guide lives at
+**[bluebuzzah.com/docs](https://bluebuzzah.com/docs/)** — start there before
+ordering parts.
 
 ### Manufacturing the PCB
 
