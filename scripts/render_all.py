@@ -29,11 +29,15 @@ def fill(s):
 XIAO = env.get("XIAO_STEP", os.path.join(env["HW"], "models", "XIAO-ESP32S3-v2.step"))
 HAVE_XIAO = os.path.exists(XIAO)
 if not HAVE_XIAO:
-    print(f"note: {XIAO} not found (set XIAO_STEP); skipping the board render and BlueBuzzah exploded view")
+    print(f"note: {XIAO} not found (set XIAO_STEP); skipping the BlueBuzzah exploded view")
 if not os.path.isdir(os.path.join(WORK, "tactor")):
     for script in ("export_tactor", "export_case") + (("export_xiao",) if HAVE_XIAO else ()):
         run([f"{FC}/freecadcmd", "-c", f"exec(open({os.path.join(HERE, 'freecad', script + '.py')!r}).read())"])
     run([f"{FC}/freecad", os.path.join(HERE, "freecad", "pcb2glb.py")], QT_QPA_PLATFORM="offscreen")
+    for step, name in ((("PCB", "v3", "kicad", "BlueBuzzah_v3.step"), "bluebuzzah-v3-pcb"),  # WROOM board + its USB-C
+                       (("models", "USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"), "usb-c")):
+        run([f"{FC}/freecad", os.path.join(HERE, "freecad", "pcb2glb.py")], QT_QPA_PLATFORM="offscreen",
+            BOARD_STEP=os.path.join(env["HW"], *step), GLB_NAME=name)
     bbx = os.path.join(WORK, "bbx")  # parts for the BlueBuzzah exploded view: XIAO materials + case parts
     os.makedirs(bbx, exist_ok=True)
     for d in ("xiao", "case"):
