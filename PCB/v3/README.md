@@ -27,7 +27,7 @@ If the BlueBuzzah Updater can't reach a board over USB, put it in the bootloader
 3. Wait 5 seconds, then slide the switch on and release BOOT.
 4. Flash the board with the Updater.
 
-The power switch cuts the 3.3 V supply in hardware about 2 seconds after it's slid off, even if the firmware has stopped running. The delay gives the firmware time to stop the motors and save the session.
+Sliding the switch off signals the firmware at once and cuts the 3.3 V supply in hardware about 2 seconds later, even if the firmware has stopped running. The delay gives the firmware time to stop the motors and save the session; once the supply is cut, the motor drivers shut down on their own.
 
 ## Rebuilding the Order Files
 

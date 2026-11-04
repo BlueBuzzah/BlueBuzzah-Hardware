@@ -13,3 +13,8 @@
 (rule "Board_0-Power switch divider beside U21"
   (condition "A.Reference == 'R70' || B.Reference == 'R70'")
   (constraint courtyard_clearance (min -1mm)))
+
+# The regulator's EN delay (R71, C2) and output caps (C43, C44) pack below U23, with D11 moved 0.43 mm right to fit; the courtyard margins touch.
+(rule "Board_0-Regulator corner"
+  (condition "A.Reference == 'C43' || A.Reference == 'C44' || A.Reference == 'R71' || A.Reference == 'C2' || A.Reference == 'D11' || B.Reference == 'C43' || B.Reference == 'C44' || B.Reference == 'R71' || B.Reference == 'C2' || B.Reference == 'D11'")
+  (constraint courtyard_clearance (min -0.2mm)))

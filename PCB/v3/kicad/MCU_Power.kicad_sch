@@ -4889,7 +4889,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 264.16 63.5 0)
 			(effects
 				(font
@@ -4916,7 +4916,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C19702"
+		(property "LCSC" "C15525"
 			(at 264.16 63.5 0)
 			(effects
 				(font
@@ -7868,27 +7868,6 @@
 		)
 		(uuid "f0397de2-941a-4941-9478-066af26e059d")
 	)
-	(global_label "SW_EN"
-		(shape bidirectional)
-		(at 157.48 160.02 180.0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "01b797d8-faa9-44a9-9c97-c43b6d9235b1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.48 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(symbol
 		(lib_id "power:GND")
 		(at 165.1 167.64 0.0)
@@ -8934,4 +8913,279 @@
 		(uuid "574a5ad6-7b93-47ad-80f8-fd9c34454f9c")
 	)
 	(embedded_fonts no)
+	(symbol
+		(lib_id "Device:R")
+		(at 147.32 160.02 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1da96c36-4dca-41d7-b3aa-361b8de841e7")
+		(property "Reference" "R71"
+			(at 147.32 157.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1M"
+			(at 147.32 162.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 148.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C26083"
+			(at 148.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "56a1317f-da76-487b-b19c-212779cdb940")
+		)
+		(pin "2"
+			(uuid "8a2854c5-ca3d-4df2-a845-a25fcafeb6df")
+		)
+		(instances
+			(project "BlueBuzzah_v3"
+				(path "/c416722b-9683-4442-adf3-585c478b2094/5c36ca7c-2c53-4171-a987-cdd10b2d1f1e"
+					(reference "R71")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 154.94 166.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8dceb5a7-5b5a-4a3e-a89a-15fede8dcaba")
+		(property "Reference" "C2"
+			(at 155.57 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 155.57 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 154.94 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C52923"
+			(at 154.94 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7675c3b2-52b2-4981-be66-c4f18a4c562c")
+		)
+		(pin "2"
+			(uuid "9908f8a3-f5b9-4451-bf95-38a4e350dbda")
+		)
+		(instances
+			(project "BlueBuzzah_v3"
+				(path "/c416722b-9683-4442-adf3-585c478b2094/5c36ca7c-2c53-4171-a987-cdd10b2d1f1e"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5d668ef-029d-4a3a-bde2-8a10b8ffb455")
+		(property "Reference" "#PWR0126"
+			(at 154.94 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "450f3c08-4825-489b-b4bc-56067a245f3b")
+		)
+		(instances
+			(project "BlueBuzzah_v3"
+				(path "/c416722b-9683-4442-adf3-585c478b2094/5c36ca7c-2c53-4171-a987-cdd10b2d1f1e"
+					(reference "#PWR0126")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 157.48 160.02) (xy 151.13 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac3964dc-8e2e-4ce7-81b3-154f21867b59")
+	)
+	(wire
+		(pts
+			(xy 154.94 160.02) (xy 154.94 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d42192ad-1ff8-4b15-b262-9ebcce0afd4d")
+	)
+	(junction
+		(at 154.94 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "61e78434-b460-40ec-aaa9-bd50363274b3")
+	)
+	(global_label "SW_COM"
+		(shape bidirectional)
+		(at 143.51 160.02 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ee1910b4-df64-40e2-923e-9abbc2846273")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 143.51 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(label "SW_EN"
+		(at 155 160.02 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4012062c-4f46-47e8-82bb-f63aa187efc0")
+	)
 )

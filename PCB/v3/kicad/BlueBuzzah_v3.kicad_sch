@@ -1890,12 +1890,6 @@
 		)
 	)
 	(junction
-		(at 33.02 152.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "13a72964-7c45-4a79-8d99-e26cd19adb0c")
-	)
-	(junction
 		(at 71.12 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1918,12 +1912,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dba8ea9f-41e9-4cb9-a30b-542414e02a6f")
-	)
-	(junction
-		(at 38.1 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5ca095b6-9769-478b-bb94-d30767c645d4")
 	)
 	(junction
 		(at 73.66 52.07)
@@ -1972,10 +1960,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ec9f7698-9054-440e-830e-d6030bb87564")
-	)
-	(no_connect
-		(at 17.78 138.43)
-		(uuid "90d3e6a4-4927-41a7-9276-357fa7b0916c")
 	)
 	(no_connect
 		(at 138.43 175.26)
@@ -2062,16 +2046,6 @@
 			(type default)
 		)
 		(uuid "19e9a133-ef9e-4008-869d-b1ba0ef1d2f6")
-	)
-	(wire
-		(pts
-			(xy 33.02 152.4) (xy 38.1 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bf94de7-b401-45f4-a27e-7a431360613f")
 	)
 	(wire
 		(pts
@@ -2392,16 +2366,6 @@
 			(type default)
 		)
 		(uuid "8c101007-3200-48f0-8b53-d9ded729c100")
-	)
-	(wire
-		(pts
-			(xy 38.1 135.89) (xy 38.1 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97b83ce2-7125-4073-bc01-649c44e518d5")
 	)
 	(wire
 		(pts
@@ -3060,7 +3024,7 @@
 			(uuid "1112c77b-989a-482c-b45e-ffb9917b7f5c")
 		)
 		(instances
-			(project ""
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "SW1")
 					(unit 1)
@@ -3262,7 +3226,7 @@
 			)
 		)
 		(instances
-			(project ""
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "H1")
 					(unit 1)
@@ -3331,7 +3295,7 @@
 			(uuid "392bcab0-6ee0-4c4f-ac9a-32370a71b76f")
 		)
 		(instances
-			(project ""
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "D2")
 					(unit 1)
@@ -3534,7 +3498,7 @@
 			(uuid "8c820b38-48cc-4674-a39a-0463b2f4d156")
 		)
 		(instances
-			(project ""
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "J1")
 					(unit 1)
@@ -3600,7 +3564,7 @@
 			(uuid "2de8d7c9-e2c6-46ae-92d6-be73978943df")
 		)
 		(instances
-			(project ""
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "#PWR023")
 					(unit 1)
@@ -3675,7 +3639,7 @@
 			(uuid "e2ac5fdd-5d45-4b8f-8e69-d7bed1ba1c0b")
 		)
 		(instances
-			(project ""
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "D1")
 					(unit 1)
@@ -4017,77 +3981,7 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 38.1 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8dceb5a7-5b5a-4a3e-a89a-15fede8dcaba")
-		(property "Reference" "C2"
-			(at 38.735 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 38.1 150.495 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 39.0652 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 38.1 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 38.1 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "28ef6954-8ae3-4d08-bd3b-387767377a1d")
-		)
-		(pin "2"
-			(uuid "f4d70b64-5d6b-4fb1-ad47-64ef21e47dd8")
-		)
-		(instances
-			(project "BlueBuzzah_v3"
-				(path "/c416722b-9683-4442-adf3-585c478b2094"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
+	)	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
 		(at 109.22 124.46 0)
@@ -4627,7 +4521,7 @@
 			(uuid "bb198c5d-b2f4-4d5c-b324-95a13da321e2")
 		)
 		(instances
-			(project ""
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "#PWR01")
 					(unit 1)
@@ -4803,7 +4697,7 @@
 			(uuid "c67a07a5-d23d-407e-8b4a-9c386028b6f2")
 		)
 		(instances
-			(project ""
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "U1")
 					(unit 1)
@@ -5378,7 +5272,7 @@
 				)
 							)
 		)
-		(property "Value" "220k"
+		(property "Value" "270k"
 			(at 45.72 133.858 0)
 			(effects
 				(font
@@ -5413,7 +5307,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25767"
+		(property "LCSC" "C25770"
 			(at 45.72 135.89 0)
 			(effects
 				(font
@@ -5672,7 +5566,7 @@
 			)
 		)
 	)
-	(global_label "SW_EN"
+	(global_label "SW_COM"
 		(shape bidirectional)
 		(at 33.02 132.08 90)
 		(fields_autoplaced yes)
@@ -5776,6 +5670,84 @@
 				)
 			)
 		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 17.78 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6ab9b13b-af80-4ccf-b205-aabf002f4d7b")
+		(property "Reference" "#PWR0125"
+			(at 17.78 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 17.78 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 17.78 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 17.78 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 17.78 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1dd3b87b-159a-4dab-888c-1864de6e0f9f")
+		)
+		(instances
+			(project "BlueBuzzah_v3"
+				(path "/c416722b-9683-4442-adf3-585c478b2094"
+					(reference "#PWR0125")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 17.78 138.43) (xy 17.78 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff42af33-dec0-408c-aed0-8f422aa200ef")
 	)
 	(sheet_instances
 		(path "/"
