@@ -8,7 +8,7 @@ The KiCad schematic and PCB design source for the BlueBuzzah v3 board. Open `Blu
 - `BlueBuzzah_v3.kicad_sch` - top-level schematic, plus `MCU_Power.kicad_sch` (module, USB and power) and `Buzzer_Drivers.kicad_sch` (haptic drivers)
 - `BlueBuzzah_v3.kicad_pcb` - PCB layout
 - `BlueBuzzah_v3.step` - 3D model of the assembled board
-- `3dmodels/` - 3D model for the ESP32-S3-WROOM-1U
+- `3dmodels/` - 3D model for the ESP32-S3-WROOM-1U-N8R8
 - `Libraries/` - the slide switch footprint
 - `fp-lib-table`, `sym-lib-table` - KiCad library tables
 - `BlueBuzzah_v3.kicad_dru` - custom DRC rule for EN's R67 and C45, which sit tight beside the module

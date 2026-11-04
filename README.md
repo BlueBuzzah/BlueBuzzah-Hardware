@@ -13,8 +13,8 @@ full build documentation.
 BlueBuzzah consists of two synchronized haptic gloves that deliver precisely
 timed vibration patterns to the fingertips. Each glove requires:
 
-- **Custom PCB** built around the Seeed XIAO ESP32-S3 (MCU + BLE), with five
-  DRV2605L haptic drivers, a TCA9548A I2C multiplexer, an LSM6DS3 IMU, a
+- **Custom PCB** built around the ESP32-S3-WROOM-1U-N8R8 module (MCU + BLE), with
+  five DRV2605L haptic drivers, a TCA9548A I2C multiplexer, an LSM6DS3 IMU, a
   WS2812B status LED, and five LRA motors (index, middle, ring, pinky, thumb)
 - **Firmware** from the [BlueBuzzah-Firmware](https://github.com/BlueBuzzah/BlueBuzzah-Firmware) repository
 - **Enclosure** — the v3 wearable enclosure has not been designed yet; see the

@@ -1,6 +1,6 @@
 # PCB v3 Manufacturing Files
 
-Fabrication-ready files for the BlueBuzzah v3 PCB, built around the JLCPCB-assembled ESP32-S3-WROOM-1U module.
+Fabrication-ready files for the BlueBuzzah v3 PCB, built around the JLCPCB-assembled ESP32-S3-WROOM-1U-N8R8 module.
 
 ## Contents
 
