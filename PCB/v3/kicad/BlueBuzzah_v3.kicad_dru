@@ -1,0 +1,5 @@
+(version 1)
+# EN's RC sits between U20's pins, U23 and Q1. The parts clear each other, but KiCad's 0.25 mm courtyard margins overlap.
+(rule "EN RC beside the module"
+  (condition "A.Reference == 'R67' || A.Reference == 'C45' || B.Reference == 'R67' || B.Reference == 'C45'")
+  (constraint courtyard_clearance (min -1mm)))

@@ -381,167 +381,7 @@
     "netclass_patterns": [
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-Net-(U14-REG)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "slash"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/USB_DN_C"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(SW1-A-Pad1)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1-NC-Pad10)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO40-Pad33)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_4+"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(J10-SBU2-PadB8)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_1+"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-Enable"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-Net-(R3-Pad2)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SCL_0"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/BOOT"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-Net-(U13-REG)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO21-Pad23)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-RBG_LED_DATA"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO42-Pad35)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_2-"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-LMU_INT"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/PROG"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_0-"
-      },
-      {
-        "netclass": "Board_0-Default",
         "pattern": "Board_0-SCK"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO35-Pad28)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1-INT1-Pad4)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO41-Pad34)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/CC1"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SCL_1"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/CC2"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1-SDX-Pad2)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO36-Pad29)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-LMU_CS"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO14-Pad22)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/USB_DP"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-TXD0-Pad37)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SDA_2"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-Net-(U11-REG)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/LED_PWR_G"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_3-"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-MISO"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO45-Pad26)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(D1-DOUT-Pad2)"
       },
       {
         "netclass": "Board_0-Default",
@@ -549,27 +389,7 @@
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_1-"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SCL_3"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SCL_2"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO37-Pad30)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U7-SD5-Pad15)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-SCL"
+        "pattern": "Board_0-/Buzzer_Drivers/SCL_4"
       },
       {
         "netclass": "Board_0-Default",
@@ -577,19 +397,11 @@
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U7-SD6-Pad17)"
+        "pattern": "Board_0-Net-(R3-Pad2)"
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U7-SC5-Pad16)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-Net-(U7-A0)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(J10-SBU1-PadA8)"
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_3-"
       },
       {
         "netclass": "Board_0-Default",
@@ -597,127 +409,15 @@
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_2+"
+        "pattern": "Board_0-Net-(U13-REG)"
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/USB_DP_C"
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_1-"
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SCL_4"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_0+"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U7-SC7-Pad20)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO7-Pad7)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO13-Pad21)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-GND"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1-NC-Pad11)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO46-Pad16)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-Net-(U8-REG)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SDA_3"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO38-Pad31)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-Power_Switch"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/EN"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U23-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO15-Pad8)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO16-Pad9)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO17-Pad10)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-RXD0-Pad36)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SDA_1"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_3+"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-Net-(U12-REG)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/MCU_Power/USB_DN"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO18-Pad11)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO39-Pad32)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U20-IO47-Pad24)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U7-SD7-Pad19)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/MOT_4-"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SDA_4"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-/Buzzer_Drivers/SDA_0"
+        "pattern": "Board_0-unconnected-(U20-IO42-Pad35)"
       },
       {
         "netclass": "Board_0-Default",
@@ -725,7 +425,171 @@
       },
       {
         "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO16-Pad9)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/EN"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO41-Pad34)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U7-SD6-Pad17)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-TXD0-Pad37)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO7-Pad7)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO18-Pad11)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(D1-DOUT-Pad2)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad11)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SDA_3"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/USB_DP"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SDA_0"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-GND"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Power_Switch"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U11-REG)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/USB_DP_C"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-RXD0-Pad36)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U7-SC7-Pad20)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-SDX-Pad2)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO37-Pad30)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO21-Pad23)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U7-SD5-Pad15)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/PROG"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J10-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U7-SD7-Pad19)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_2-"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-LMU_CS"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "slash"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-SCL"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SDA_2"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO13-Pad21)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_4+"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO35-Pad28)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO47-Pad24)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SCL_1"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_3+"
+      },
+      {
+        "netclass": "Board_0-Default",
         "pattern": "Board_0-unconnected-(U7-SC6-Pad18)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J10-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO36-Pad29)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/LED_PWR_G"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/CC2"
       },
       {
         "netclass": "Board_0-Default",
@@ -733,7 +597,143 @@
       },
       {
         "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO15-Pad8)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_0+"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-LMU_INT"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-INT1-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U12-REG)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U14-REG)"
+      },
+      {
+        "netclass": "Board_0-Default",
         "pattern": "Board_0-unconnected-(U20-IO48-Pad25)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO14-Pad22)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U8-REG)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_4-"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-MISO"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/CC1"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO45-Pad26)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U7-SC5-Pad16)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_0-"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/BOOT"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO39-Pad32)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO17-Pad10)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SDA_4"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U7-A0)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SCL_2"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_1+"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SDA_1"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO46-Pad16)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SCL_3"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(SW1-A-Pad1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/USB_DN"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO38-Pad31)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/MOT_2+"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-RBG_LED_DATA"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Buzzer_Drivers/SCL_0"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Enable"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U20-IO40-Pad33)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U23-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/MCU_Power/USB_DN_C"
       },
       {
         "netclass": "Board_0-Power",

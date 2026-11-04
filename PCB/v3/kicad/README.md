@@ -11,5 +11,6 @@ The KiCad schematic and PCB design source for the BlueBuzzah v3 board. Open `Blu
 - `3dmodels/` - 3D model for the ESP32-S3-WROOM-1U
 - `Libraries/` - the slide switch footprint
 - `fp-lib-table`, `sym-lib-table` - KiCad library tables
+- `BlueBuzzah_v3.kicad_dru` - custom DRC rule for EN's R67 and C45, which sit tight beside the module
 
 Everything else comes from KiCad's standard libraries. KiCad has no 3D model for the USB-C connector (J10), so it's missing from the 3D view and the STEP file.

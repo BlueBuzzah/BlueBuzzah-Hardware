@@ -1,2 +1,5 @@
 (version 1)
 
+(rule "Board_0-EN RC beside the module"
+  (condition "A.Reference == 'R67' || A.Reference == 'C45' || B.Reference == 'R67' || B.Reference == 'C45'")
+  (constraint courtyard_clearance (min -1mm)))
