@@ -18,6 +18,14 @@ Fabrication-ready files for the BlueBuzzah v3 PCB, built around the JLCPCB-assem
 
 Follow [ORDERING.md](ORDERING.md) to order the board fully assembled from JLCPCB. The panel holds one board, so the panel quantity is the board quantity.
 
+## Recovering a Board
+
+If the BlueBuzzah Updater can't reach a board over USB, put it in the bootloader by hand:
+
+1. Open the case and unplug the battery and USB. The slide switch doesn't cut power.
+2. Hold the BOOT button (SW2) and plug in USB.
+3. Release BOOT, then flash the board with the Updater.
+
 ## Rebuilding the Order Files
 
 Install KiCad 10, quit it, then run:

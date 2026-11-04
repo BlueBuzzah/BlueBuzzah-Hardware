@@ -3,3 +3,8 @@
 (rule "Board_0-EN RC beside the module"
   (condition "A.Reference == 'R67' || A.Reference == 'C45' || B.Reference == 'R67' || B.Reference == 'C45'")
   (constraint courtyard_clearance (min -1mm)))
+
+# SW2 sits in the gap beside R43 and R45. The parts clear each other, but the switch's and KiCad's 0.25 mm courtyard margins overlap.
+(rule "Board_0-BOOT button in its gap"
+  (condition "A.Reference == 'SW2' || B.Reference == 'SW2'")
+  (constraint courtyard_clearance (min -1mm)))
