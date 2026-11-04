@@ -37,9 +37,8 @@ The unlabeled exploded renders (`tactor-exploded.png`, `bluebuzzah-exploded.png`
 | `HW` | this checkout | Where the CAD files in `models/` are read from |
 | `WORK` | a new temporary folder | Intermediate meshes; reuse one to skip the FreeCAD step |
 | `BB_SAMPLES` | each config's value | Render samples; lower for quick previews |
-| `TACTOR_STEP`, `CASE_STEP`, `BOARD_STEP`, `XIAO_STEP` | files in `$HW/models/` | Override a STEP file's path |
-
-`XIAO_STEP` is the Seeed Studio XIAO ESP32-S3 model (`XIAO-ESP32S3-v2.step`). Without it, the BlueBuzzah exploded view is skipped.
+| `TACTOR_STEP`, `CASE_STEP` | files in `$HW/models/` | Override a STEP file's path |
+| `BOARD_STEP` | `$HW/PCB/v3/kicad/BlueBuzzah_v3.step` | Override the board STEP's path |
 
 ## Layout
 
@@ -59,5 +58,4 @@ The unlabeled exploded renders (`tactor-exploded.png`, `bluebuzzah-exploded.png`
 - **Compression spring:** the supplier lists 5 mm compressed and 3 mm free length, which can't be right; the model uses 5 mm free length, which fits the housing's 5.2 mm spring space. The coil count (7 turns) is assumed.
 - **Board power switch:** the KiCad board assigns the wrong 3D model (a two-row DPDT switch) to the K3-1260D-L1 footprint, so its second pin row hangs off the board edge. Renders remove it and use `builders/switch.py`, sized from the footprint outline (body height assumed).
 - **Tactor finger cup:** its STEP solid is invalid and meshes with holes at fine detail; the export coarsens it until the mesh is closed.
-- **XIAO ESP32-S3:** its STEP has almost no colors; `freecad/export_xiao.py` groups its parts by material and places it on footprint U2.
-- **BlueBuzzah v3 board (`bluebuzzah-v3-pcb`):** rendered from `PCB/v3/kicad/BlueBuzzah_v3.step` (ESP32-S3-WROOM-1U) with a blue solder mask and a silver-grey module shield. KiCad's library has no model for the USB-C connector (J10), so the render adds `models/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step`, taken from KiCad's RoyalBlue54L demo (CERN Open Hardware Licence v2, Permissive). The board's finished `.glb` in `models/` is still the XIAO version, which the assembly images use.
+- **BlueBuzzah v3 board (`bluebuzzah-v3-pcb`):** rendered from `PCB/v3/kicad/BlueBuzzah_v3.step` (ESP32-S3-WROOM-1U) with a blue solder mask and a silver-grey module shield. KiCad's library has no model for the USB-C connector (J10), so the render adds `models/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step`, taken from KiCad's RoyalBlue54L demo (CERN Open Hardware Licence v2, Permissive). The case exploded view uses the same board and fixes.

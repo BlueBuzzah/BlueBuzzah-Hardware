@@ -1,8 +1,8 @@
-# Board STEP -> colored {WORK}/pcb/<GLB_NAME>.glb (default BlueBuzzah_v3). Colors only load with the GUI's view providers, so run the full
-# FreeCAD app offscreen (no window): QT_QPA_PLATFORM=offscreen freecad pcb2glb.py
+# Board STEP -> colored {WORK}/pcb/<GLB_NAME>.glb (default: the v3 board, bluebuzzah-v3-pcb). Colors only load with the
+# GUI's view providers, so run the full FreeCAD app offscreen (no window): QT_QPA_PLATFORM=offscreen freecad pcb2glb.py
 import os, FreeCAD, FreeCADGui, ImportGui
-step = os.environ.get("BOARD_STEP", os.path.join(os.environ["HW"], "models", "BlueBuzzah-v3-pcb-model.step"))
-out = os.path.join(os.environ["WORK"], "pcb", os.environ.get("GLB_NAME", "BlueBuzzah_v3") + ".glb")
+step = os.environ.get("BOARD_STEP", os.path.join(os.environ["HW"], "PCB", "v3", "kicad", "BlueBuzzah_v3.step"))
+out = os.path.join(os.environ["WORK"], "pcb", os.environ.get("GLB_NAME", "bluebuzzah-v3-pcb") + ".glb")
 try:
     os.makedirs(os.path.dirname(out), exist_ok=True)
     doc = FreeCAD.newDocument("p"); ImportGui.insert(step, "p")

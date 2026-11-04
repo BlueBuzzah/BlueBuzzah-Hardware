@@ -1,5 +1,9 @@
 {
- "dir": [1.2, -1.6, 1.1],
+ "dir": [
+  1.2,
+  -1.6,
+  1.1
+ ],
  "fill": 0.86,
  "margin": 0.05,
  "glb": "{work}/pcb/bluebuzzah-v3-pcb.glb",
@@ -17,5 +21,7 @@
  ],
  "hook": "{scripts}/configs/main-parts/bluebuzzah-v3-pcb.py",
  "out": "{out}/images/v3/main-parts/bluebuzzah-v3-pcb.png",
- "web_width": 1800
+ "web_width": 1800,
+ "model": "{out}/models/bluebuzzah-v3-pcb.glb",
+ "model_scale": 1
 }
