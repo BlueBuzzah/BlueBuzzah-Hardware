@@ -11,3 +11,10 @@ docs/superpowers
 images/
 
 .claude/worktrees/
+
+# KiCad and make_jlcpcb.py
+.venv-kikit/
+*.kicad_prl
+~*.lck
+fp-info-cache
+*-backups/

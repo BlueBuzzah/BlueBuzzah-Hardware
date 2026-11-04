@@ -47,7 +47,10 @@ assembly:
 - `jlc_pcb_gerbers.zip` — Gerber files for PCB manufacturing
 - `BOM_JCLPCB_BlueBuzzah_v3.csv` — bill of materials
 - `CPL_JLCPCB_BlueBuzzah_v3-all-pos.csv` — pick-and-place positions
+- `ORDERING.md` — step-by-step JLCPCB ordering notes
+- `make_jlcpcb.py` — rebuilds these order files from the KiCad sources
 - `kicad/` — KiCad schematic and PCB source files
+- `panel/` — the KiKit panel the order files are built from
 
 Upload the Gerber zip, BOM, and CPL to JLCPCB's SMT assembly service to order the
 board fully assembled. See the wiki's "Ordering the PCB" page for details.
