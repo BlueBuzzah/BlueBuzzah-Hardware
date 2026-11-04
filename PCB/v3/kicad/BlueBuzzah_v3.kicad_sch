@@ -1914,10 +1914,10 @@
 		(uuid "22c60fa0-9963-4857-b38b-cdf0af1e3e1a")
 	)
 	(junction
-		(at 27.94 135.89)
+		(at 53.34 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "577bc65d-5ecf-4cab-b79d-31a507cb6733")
+		(uuid "dba8ea9f-41e9-4cb9-a30b-542414e02a6f")
 	)
 	(junction
 		(at 38.1 135.89)
@@ -2325,13 +2325,43 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 135.89) (xy 62.23 135.89)
+			(xy 38.1 135.89) (xy 41.91 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "84a6caef-c043-491c-b60d-508952a3a9d4")
+		(uuid "3d282e13-d3ce-4560-9761-0a2a5828f0aa")
+	)
+	(wire
+		(pts
+			(xy 49.53 135.89) (xy 62.23 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb1ac9a7-b887-414c-8be3-b8ea3fefe709")
+	)
+	(wire
+		(pts
+			(xy 53.34 135.89) (xy 53.34 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06f27169-7724-44ab-be16-c57d70376617")
+	)
+	(wire
+		(pts
+			(xy 33.02 135.89) (xy 33.02 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef4d9fdb-2f36-4fac-b4a7-409d20213bef")
 	)
 	(wire
 		(pts
@@ -2432,16 +2462,6 @@
 			(type default)
 		)
 		(uuid "aedd27ec-de4f-48f8-994d-9f4ca582b01f")
-	)
-	(wire
-		(pts
-			(xy 27.94 135.89) (xy 27.94 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8942c29-b10f-4905-bf06-6eedf5c8ed32")
 	)
 	(wire
 		(pts
@@ -3523,16 +3543,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "power:VBUS")
 		(at 13.97 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3495f3d6-dbf1-45c2-9e08-d7b4a64471a6")
+		(fields_autoplaced yes)
+		(uuid "d6b55430-adc0-4aac-9c09-bbb6baa44730")
 		(property "Reference" "#PWR023"
-			(at 13.97 134.62 0)
+			(at 13.97 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3540,8 +3561,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 17.526 128.27 0)
+		(property "Value" "VBat"
+			(at 13.97 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3566,7 +3587,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
 			(at 13.97 130.81 0)
 			(effects
 				(font
@@ -3576,10 +3597,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a944ac21-b96e-460c-8f75-c816ccda09e3")
+			(uuid "2de8d7c9-e2c6-46ae-92d6-be73978943df")
 		)
 		(instances
-			(project "BlueBuzzah_v3"
+			(project ""
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "#PWR023")
 					(unit 1)
@@ -3932,7 +3953,7 @@
 	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
-		(at 27.94 144.78 0)
+		(at 53.34 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3941,7 +3962,7 @@
 		(fields_autoplaced yes)
 		(uuid "815a845d-397d-4fa0-8692-a076e8a3fb87")
 		(property "Reference" "#PWR02"
-			(at 27.94 151.13 0)
+			(at 53.34 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3950,7 +3971,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 27.94 149.86 0)
+			(at 53.34 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3959,7 +3980,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 27.94 144.78 0)
+			(at 53.34 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3968,7 +3989,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 144.78 0)
+			(at 53.34 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3977,7 +3998,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 27.94 144.78 0)
+			(at 53.34 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5264,7 +5285,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 27.94 140.97 0)
+		(at 53.34 140.97 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5272,25 +5293,25 @@
 		(dnp no)
 		(uuid "fdd0fdbf-9f29-46de-ad7e-cbbb60154c97")
 		(property "Reference" "R2"
-			(at 25.146 144.526 0)
+			(at 55.626 140.208 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "4.7k"
-			(at 26.67 142.748 0)
+		(property "Value" "1M"
+			(at 55.626 142.748 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 26.162 140.97 90)
+			(at 51.562 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5299,7 +5320,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 27.94 140.97 0)
+			(at 53.34 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5308,7 +5329,16 @@
 			)
 		)
 		(property "Description" ""
-			(at 27.94 140.97 0)
+			(at 53.34 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C26083"
+			(at 53.34 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5326,6 +5356,82 @@
 			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 45.72 135.89 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "871e7722-6356-49e8-8553-d94f6c0e738a")
+		(property "Reference" "R70"
+			(at 45.72 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+							)
+		)
+		(property "Value" "220k"
+			(at 45.72 133.858 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+							)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 45.72 137.668 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25767"
+			(at 45.72 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "712f43c8-2c33-40da-917b-cc6b13c1c8ad")
+		)
+		(pin "2"
+			(uuid "1d3c883e-40f0-48b0-9455-fa402c2cd25a")
+		)
+		(instances
+			(project "BlueBuzzah_v3"
+				(path "/c416722b-9683-4442-adf3-585c478b2094"
+					(reference "R70")
 					(unit 1)
 				)
 			)
@@ -5558,6 +5664,27 @@
 		(uuid "02c47bb7-b357-4965-8e82-38866c47f426")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 62.23 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SW_EN"
+		(shape bidirectional)
+		(at 33.02 132.08 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "06c6a230-2395-4528-a47a-766160c8fbae")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.02 132.08 90)
 			(effects
 				(font
 					(size 1.27 1.27)

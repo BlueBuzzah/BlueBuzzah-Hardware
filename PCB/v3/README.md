@@ -22,9 +22,12 @@ Follow [ORDERING.md](ORDERING.md) to order the board fully assembled from JLCPCB
 
 If the BlueBuzzah Updater can't reach a board over USB, put it in the bootloader by hand:
 
-1. Open the case and unplug the battery and USB. The slide switch doesn't cut power.
-2. Hold the BOOT button (SW2) and plug in USB.
-3. Release BOOT, then flash the board with the Updater.
+1. Open the case and plug in USB.
+2. Hold the BOOT button (SW2) and slide the power switch off.
+3. Wait 5 seconds, then slide the switch on and release BOOT.
+4. Flash the board with the Updater.
+
+The power switch cuts the 3.3 V supply in hardware about 2 seconds after it's slid off, even if the firmware has stopped running. The delay gives the firmware time to stop the motors and save the session.
 
 ## Rebuilding the Order Files
 

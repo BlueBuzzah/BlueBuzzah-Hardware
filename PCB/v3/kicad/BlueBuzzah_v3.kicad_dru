@@ -8,3 +8,8 @@
 (rule "BOOT button in its gap"
   (condition "A.Reference == 'SW2' || B.Reference == 'SW2'")
   (constraint courtyard_clearance (min -1mm)))
+
+# R70 sits between U21, R2 and SW1. The parts clear each other, but the courtyard margins overlap.
+(rule "Power switch divider beside U21"
+  (condition "A.Reference == 'R70' || B.Reference == 'R70'")
+  (constraint courtyard_clearance (min -1mm)))

@@ -7868,15 +7868,26 @@
 		)
 		(uuid "f0397de2-941a-4941-9478-066af26e059d")
 	)
-	(label "VSYS"
+	(global_label "SW_EN"
+		(shape bidirectional)
 		(at 157.48 160.02 180.0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify right)
 		)
-		(uuid "a0fd9eef-b1fe-46db-ae33-50428a373e7c")
+		(uuid "01b797d8-faa9-44a9-9c97-c43b6d9235b1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.48 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
