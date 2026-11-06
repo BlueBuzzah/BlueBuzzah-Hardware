@@ -41,7 +41,7 @@ The BOM's notes list checked alternates for D1, J1 to J6, C17, R60, R61, R64, R6
 
 PCBWay adds two break-away rails to SMT orders by default. This board needs them on the left and right edges, because the connectors overhang the top and bottom. It's also smaller than PCBWay's published 50 × 50 mm assembly minimum and has no fiducials of its own, so confirm the rails with PCBWay before ordering, and include this note in the remarks:
 
-> The connectors overhang the board's top edge by about 2 mm and its bottom edge by about 1.5 mm, so please don't V-cut, and don't put rails on those edges. Put the rails on the left and right edges, joined by mouse-bite tabs. U20 sits 0.3 mm from the left edge, so keep the tabs clear of it. The board has no fiducials, so please put them on the rails.
+> The connectors overhang the board's top edge by about 2 mm and its bottom edge by about 1.5 mm, so please don't V-cut, and don't put rails on those edges. Put the rails on the left and right edges, joined by mouse-bite tabs. U20 sits 0.3 mm from the left edge and the pads of C43 and C44 sit 0.43 mm from it, so put the left tabs in the top 14 mm of that edge, viewed from the top side. The board has no fiducials, so please put them on the rails.
 
 ## Rebuilding the Files
 

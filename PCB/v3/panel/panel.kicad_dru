@@ -1,20 +1,25 @@
 (version 1)
 
-(rule "Board_0-EN RC beside the module"
-  (condition "A.Reference == 'R67' || A.Reference == 'C45' || B.Reference == 'R67' || B.Reference == 'C45'")
+(rule "Board_0-R67 and C45"
+  (condition "(A.Reference == 'R67' && B.Reference == 'C45') || (A.Reference == 'C45' && B.Reference == 'R67')")
   (constraint courtyard_clearance (min -1mm)))
 
-# SW2 sits in the gap beside R43 and R45. The parts clear each other, but the switch's and KiCad's 0.25 mm courtyard margins overlap.
-(rule "Board_0-BOOT button in its gap"
-  (condition "A.Reference == 'SW2' || B.Reference == 'SW2'")
+(rule "Board_0-R67 and U20"
+  (condition "(A.Reference == 'R67' && B.Reference == 'U20') || (A.Reference == 'U20' && B.Reference == 'R67')")
   (constraint courtyard_clearance (min -1mm)))
 
-# R70 sits between U21, R2 and SW1. The parts clear each other, but the courtyard margins overlap.
-(rule "Board_0-Power switch divider beside U21"
-  (condition "A.Reference == 'R70' || B.Reference == 'R70'")
+(rule "Board_0-C45 and U20"
+  (condition "(A.Reference == 'C45' && B.Reference == 'U20') || (A.Reference == 'U20' && B.Reference == 'C45')")
   (constraint courtyard_clearance (min -1mm)))
 
-# The regulator's EN delay (R71, C2) and output caps (C43, C44) pack below U23, with D11 moved 0.43 mm right to fit; the courtyard margins touch.
-(rule "Board_0-Regulator corner"
-  (condition "A.Reference == 'C43' || A.Reference == 'C44' || A.Reference == 'R71' || A.Reference == 'C2' || A.Reference == 'D11' || B.Reference == 'C43' || B.Reference == 'C44' || B.Reference == 'R71' || B.Reference == 'C2' || B.Reference == 'D11'")
-  (constraint courtyard_clearance (min -0.2mm)))
+(rule "Board_0-C45 and Q1"
+  (condition "(A.Reference == 'C45' && B.Reference == 'Q1') || (A.Reference == 'Q1' && B.Reference == 'C45')")
+  (constraint courtyard_clearance (min -1mm)))
+
+(rule "Board_0-SW2 and R43"
+  (condition "(A.Reference == 'SW2' && B.Reference == 'R43') || (A.Reference == 'R43' && B.Reference == 'SW2')")
+  (constraint courtyard_clearance (min -1mm)))
+
+(rule "Board_0-SW2 and R45"
+  (condition "(A.Reference == 'SW2' && B.Reference == 'R45') || (A.Reference == 'R45' && B.Reference == 'SW2')")
+  (constraint courtyard_clearance (min -1mm)))
