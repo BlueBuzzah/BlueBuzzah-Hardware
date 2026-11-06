@@ -35,6 +35,8 @@ Use the three order files in this folder together, unchanged. They describe one 
 
 U1's pads are 0.15 mm apart, under PCBWay's 0.19 mm minimum for a solder mask dam in blue or green, so expect them to propose one open mask area across those pads. The motor drivers and USB-C connector, at 0.2 mm, are within the limit.
 
+U21 pad 2 and U23 pad 2 each have a 0.2 mm via in the pad, because neither has room to move it. They're unfilled, like the board's other vias, so tell PCBWay they're intentional if it asks.
+
 The BOM's notes list checked alternates for D1, J1 to J6, C17, R60, R61, R64, R67 and R68, and allow any 1% 0402 equivalent for every resistor. For any other part PCBWay can't source, change it in `make_pcbway.py` and rebuild, so the files stay correct for the next order.
 
 ## Panel Note
