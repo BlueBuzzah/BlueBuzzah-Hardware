@@ -11,12 +11,16 @@ Fabrication-ready files for the BlueBuzzah v3 PCB, built around the JLCPCB-assem
 | `CPL_JLCPCB_BlueBuzzah_v3-all-pos.csv` | Pick-and-place positions, corrected for JLCPCB's parts library |
 | `ORDERING.md` | Step-by-step JLCPCB ordering notes |
 | `make_jlcpcb.py` | Rebuilds the order files and the panel from the KiCad sources |
+| **[pcbway/](pcbway/)** | Separate PCBWay order files for one board, not panelized |
+| `make_pcbway.py` | Rebuilds the PCBWay order files from the KiCad sources |
 | **[kicad/](kicad/)** | KiCad schematic, PCB and 3D sources |
 | `panel/` | The KiKit panel the order files are built from |
 
 ## Ordering the Board
 
 Follow [ORDERING.md](ORDERING.md) to order the board fully assembled from JLCPCB. The panel holds one board, so the panel quantity is the board quantity.
+
+To order from PCBWay instead, follow [pcbway/ORDERING.md](pcbway/ORDERING.md). Those files describe the bare board, with no panel. Don't mix them with the JLCPCB files.
 
 ## Recovering a Board
 
@@ -38,3 +42,5 @@ python3 make_jlcpcb.py
 ```
 
 The script checks the board and panel with DRC, then rewrites the panel and all three order files. Check any new package in JLCPCB's placement preview before ordering.
+
+The PCBWay files are separate. Run `python3 make_pcbway.py` to rebuild them.
