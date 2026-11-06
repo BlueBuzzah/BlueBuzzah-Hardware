@@ -1944,7 +1944,7 @@
 		(uuid "bf34876e-7658-4d2e-ad4d-4f3f1d9133e1")
 	)
 	(junction
-		(at 39.37 105.41)
+		(at 39.37 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c67b6ed5-e57e-4fd0-823e-49b83aa729f9")
@@ -1966,16 +1966,58 @@
 		(uuid "13fe3420-77f8-4602-92b2-86e4cae15bb3")
 	)
 	(no_connect
-		(at 152.4 128.27)
-		(uuid "63bcc141-a778-4c65-b98e-91670a444bf5")
-	)
-	(no_connect
-		(at 152.4 125.73)
-		(uuid "a331a38a-69d8-41d0-b84a-69360a58140f")
-	)
-	(no_connect
 		(at 182.88 123.19)
 		(uuid "cb5c6635-096f-4860-8c2e-6fa4e674ce2c")
+	)
+	(wire
+		(pts
+			(xy 39.37 102.87) (xy 35.56 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d66cea9-576e-4d29-aa30-a31f345177cf")
+	)
+	(wire
+		(pts
+			(xy 35.56 102.87) (xy 35.56 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a303a147-4311-460a-b9de-c70dce492fee")
+	)
+	(wire
+		(pts
+			(xy 35.56 114.3) (xy 39.37 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60418374-7298-45fb-b99c-c09bdc7596bb")
+	)
+	(wire
+		(pts
+			(xy 152.4 125.73) (xy 152.4 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57f25882-47b5-4920-ab32-20e533fdaadf")
+	)
+	(wire
+		(pts
+			(xy 152.4 128.27) (xy 149.86 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5532f53b-9c23-43f9-85d8-d7e073385438")
 	)
 	(wire
 		(pts
@@ -2006,16 +2048,6 @@
 			(type default)
 		)
 		(uuid "16ecc81d-d026-42a4-9375-bbaa57faf374")
-	)
-	(wire
-		(pts
-			(xy 39.37 102.87) (xy 39.37 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1759b6f4-f87a-4069-9b6e-8ff6abd03ee3")
 	)
 	(wire
 		(pts
@@ -3101,6 +3133,74 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 149.86 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79692906-c630-4790-962e-a93dc3cbdd3e")
+		(property "Reference" "#PWR0126"
+			(at 149.86 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 149.86 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "50fb4470-cd39-4511-975a-e91646d9d8c4")
+		)
+		(instances
+			(project "BlueBuzzah_v3"
+				(path "/c416722b-9683-4442-adf3-585c478b2094"
+					(reference "#PWR0126")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
 		(at 143.51 52.07 0)
 		(unit 1)
@@ -4067,7 +4167,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7k"
+		(property "Value" "100k"
 			(at 44.958 109.728 0)
 			(effects
 				(font
@@ -5126,7 +5226,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7k"
+		(property "Value" "10k"
 			(at 44.704 117.602 0)
 			(effects
 				(font

@@ -1,3 +1,4 @@
 (sym_lib_table
   (version 7)
+  (lib (name "Driver_Haptic")(type "KiCad")(uri "${KIPRJMOD}/Libraries/Driver_Haptic.kicad_sym")(options "")(descr ""))
 )

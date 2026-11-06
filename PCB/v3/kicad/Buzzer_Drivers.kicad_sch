@@ -290,7 +290,7 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+			(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4680,7 +4680,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 180.34 0)
 			(effects
 				(font
@@ -4977,7 +4977,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 76.2 0)
 			(effects
 				(font
@@ -5682,7 +5682,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 110.49 0)
 			(effects
 				(font
@@ -5913,7 +5913,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 40.64 0)
 			(effects
 				(font
@@ -7910,7 +7910,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 146.05 0)
 			(effects
 				(font
