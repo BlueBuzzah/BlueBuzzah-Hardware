@@ -18360,9 +18360,9 @@
 			)
 		)
 		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
-		(path "/462246b4-5a71-4c65-bfdd-f8f64bf9c489")
-		(sheetname "/")
-		(sheetfile "BlueBuzzah_v3.kicad_sch")
+		(path "/5c36ca7c-2c53-4171-a987-cdd10b2d1f1e/462246b4-5a71-4c65-bfdd-f8f64bf9c489")
+		(sheetname "/MCU_Power/")
+		(sheetfile "MCU_Power.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
