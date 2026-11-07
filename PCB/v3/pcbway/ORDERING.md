@@ -33,7 +33,7 @@ Use the three order files in this folder together, unchanged. They describe one 
 4. Add the panel note below to the order.
 5. Review the production files PCBWay sends before approving them. The centroid uses KiCad's rotations, and `Pad X` and `Pad Y` give each part's pin 1. Check D1, D2, D11, U1 and the SOT-23 parts in particular. D2's cathode (pad 1) belongs at the closed end of the silkscreen outline, toward the bottom of the board.
 
-U1's pads are 0.15 mm apart, under PCBWay's 0.19 mm minimum for a solder mask dam in blue or green, so expect them to propose one open mask area across those pads. The motor drivers and USB-C connector, at 0.2 mm, are within the limit.
+U1's pads are narrowed to 0.30 mm, from the 0.35 mm in KiCad's library, so they sit 0.20 mm apart. That clears PCBWay's 0.19 mm minimum for a solder mask dam in blue or green, as the motor drivers and USB-C connector do at 0.2 mm.
 
 U21 pad 2 and U23 pad 2 each have a 0.2 mm via in the pad, because neither has room to move it. They're unfilled, like the board's other vias, so tell PCBWay they're intentional if it asks.
 

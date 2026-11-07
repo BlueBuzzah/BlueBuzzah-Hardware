@@ -13,4 +13,4 @@ The KiCad schematic and PCB design source for the BlueBuzzah v3 board. Open `Blu
 - `fp-lib-table`, `sym-lib-table` - KiCad library tables
 - `BlueBuzzah_v3.kicad_dru` - custom DRC rules for the six part pairs in tight gaps: R67 with C45 and U20; C45 with U20 and Q1; and SW2 with R43 and R45
 
-Everything else comes from KiCad's standard libraries. KiCad has no 3D model for the USB-C connector (J10), so it's missing from the 3D view and the STEP file. J10's footprint keeps local shell-pad changes, so KiCad reports it as different from its library copy.
+Everything else comes from KiCad's standard libraries. KiCad has no 3D model for the USB-C connector (J10), so it's missing from the 3D view and the STEP file. J10's footprint keeps local shell-pad changes, and U1's pads are narrowed to 0.30 mm so PCBWay can keep a solder mask dam between them. KiCad reports both as different from their library copies.
