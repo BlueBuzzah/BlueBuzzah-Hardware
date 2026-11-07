@@ -2,9 +2,9 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-Hardware design files for BlueBuzzah v3, a medical device research platform
-implementing vibrotactile Coordinated Reset (vCR) therapy for Parkinson's
-disease research. This repository contains the files needed to manufacture the
+Hardware design files for BlueBuzzah v3, an open-source research platform for
+vibrotactile Coordinated Reset (vCR) stimulation, inspired by published research
+in Parkinson's disease. This repository contains the files needed to manufacture the
 physical components: PCB fabrication files, the board 3D model, and links to the
 full build documentation.
 
