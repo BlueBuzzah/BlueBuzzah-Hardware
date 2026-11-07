@@ -7299,7 +7299,7 @@
 		(dnp no)
 		(uuid "b7e78f78-f7cf-42e5-a7e1-256e71302449")
 		(property "Reference" "D11"
-			(at 124.46 144.78 0)
+			(at 127 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7308,7 +7308,7 @@
 			)
 		)
 		(property "Value" "B5819W"
-			(at 124.46 150.495 0)
+			(at 131.445 150.495 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9863,7 +9863,7 @@
 		(dnp no)
 		(uuid "1da96c36-4dca-41d7-b3aa-361b8de841e7")
 		(property "Reference" "R71"
-			(at 145.415 162.56 90)
+			(at 149.86 162.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9872,7 +9872,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 149.86 162.56 90)
+			(at 153.67 162.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
