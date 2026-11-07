@@ -4190,7 +4190,7 @@
 		(uuid "19048bb5-34d2-440b-ac9f-14c5ed86eb0e")
 	)
 	(global_label "Enable"
-		(shape bidirectional)
+		(shape output)
 		(at 200.66 86.36 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4211,7 +4211,7 @@
 		)
 	)
 	(global_label "Power_Input_Detect"
-		(shape bidirectional)
+		(shape input)
 		(at 200.66 88.9 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4232,7 +4232,7 @@
 		)
 	)
 	(global_label "Power_Switch"
-		(shape bidirectional)
+		(shape input)
 		(at 200.66 91.44 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4252,8 +4252,8 @@
 			)
 		)
 	)
-	(global_label "RBG_LED_DATA"
-		(shape bidirectional)
+	(global_label "RGB_LED_DATA"
+		(shape output)
 		(at 200.66 93.98 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4295,7 +4295,7 @@
 		)
 	)
 	(global_label "SCL"
-		(shape bidirectional)
+		(shape output)
 		(at 200.66 99.06 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4316,7 +4316,7 @@
 		)
 	)
 	(global_label "SCK"
-		(shape bidirectional)
+		(shape output)
 		(at 200.66 114.3 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4337,7 +4337,7 @@
 		)
 	)
 	(global_label "MISO"
-		(shape bidirectional)
+		(shape input)
 		(at 200.66 104.14 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4358,7 +4358,7 @@
 		)
 	)
 	(global_label "MOSI"
-		(shape bidirectional)
+		(shape output)
 		(at 200.66 106.68 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4379,7 +4379,7 @@
 		)
 	)
 	(global_label "LMU_INT"
-		(shape bidirectional)
+		(shape input)
 		(at 200.66 109.22 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -4400,7 +4400,7 @@
 		)
 	)
 	(global_label "LMU_CS"
-		(shape bidirectional)
+		(shape output)
 		(at 200.66 111.76 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -8559,7 +8559,7 @@
 		)
 	)
 	(global_label "Enable"
-		(shape bidirectional)
+		(shape output)
 		(at 205.74 177.8 180.0)
 		(fields_autoplaced yes)
 		(effects
@@ -8901,7 +8901,7 @@
 			)
 		)
 	)
-	(text "ESP32-S3-WROOM-1U (U.FL / MHF I socket on the module) with the same\nexternal antenna the XIAO build used. WROOM-1 symbol: identical pinout."
+	(text "ESP32-S3-WROOM-1U (U.FL / MHF I socket on the module).\nWROOM-1 symbol: identical pinout."
 		(exclude_from_sim no)
 		(at 160.02 20.32 0)
 		(effects
@@ -8911,6 +8911,39 @@
 			(justify left top)
 		)
 		(uuid "574a5ad6-7b93-47ad-80f8-fd9c34454f9c")
+	)
+	(text "Charge current = 1000 V / R64 = 100 mA.\nChange R64 for a different battery."
+		(exclude_from_sim no)
+		(at 20.32 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "d4f732f8-5179-4eb4-a1a1-d3eede30870d")
+	)
+	(text "With USB out, R5 and R4 on the top sheet are Q1's only gate pull-down.\nRemoving either floats the gate. R3 only isolates GPIO2 and can go."
+		(exclude_from_sim no)
+		(at 113.03 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "5625fd15-0d93-407d-a16f-7a52d9fdefb6")
+	)
+	(text "Sliding SW1 off grounds SW_COM. GPIO3 reads low at once, and EN falls\nthrough R71 and C2, cutting 3.3 V about 2 s later. GPIO3 is an input,\nso firmware can't hold U23 on."
+		(exclude_from_sim no)
+		(at 135 144 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "04762b34-346f-4fc2-a01c-76d308e18c40")
 	)
 	(embedded_fonts no)
 	(symbol
@@ -9157,7 +9190,7 @@
 		(uuid "61e78434-b460-40ec-aaa9-bd50363274b3")
 	)
 	(global_label "SW_COM"
-		(shape bidirectional)
+		(shape input)
 		(at 143.51 160.02 180)
 		(fields_autoplaced yes)
 		(effects

@@ -2600,7 +2600,7 @@
 		(uuid "f8ea540b-743f-491c-8af4-cc06346165d7")
 	)
 	(global_label "MOSI"
-		(shape bidirectional)
+		(shape input)
 		(at 147.32 133.35 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2666,7 +2666,7 @@
 		)
 	)
 	(global_label "MISO"
-		(shape bidirectional)
+		(shape output)
 		(at 147.32 123.19 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2709,7 +2709,7 @@
 			)
 		)
 	)
-	(global_label "RBG_LED_DATA"
+	(global_label "RGB_LED_DATA"
 		(shape input)
 		(at 118.11 175.26 180)
 		(fields_autoplaced yes)
@@ -5594,7 +5594,7 @@
 		)
 	)
 	(global_label "Enable"
-		(shape bidirectional)
+		(shape input)
 		(at 48.26 128.27 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5615,7 +5615,7 @@
 		)
 	)
 	(global_label "Power_Input_Detect"
-		(shape bidirectional)
+		(shape output)
 		(at 45.72 132.08 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5636,7 +5636,7 @@
 		)
 	)
 	(global_label "Power_Switch"
-		(shape bidirectional)
+		(shape output)
 		(at 62.23 135.89 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5657,7 +5657,7 @@
 		)
 	)
 	(global_label "SW_COM"
-		(shape bidirectional)
+		(shape output)
 		(at 33.02 132.08 90)
 		(fields_autoplaced yes)
 		(effects

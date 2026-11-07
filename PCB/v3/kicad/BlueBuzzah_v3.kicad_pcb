@@ -6669,7 +6669,7 @@
 			(at -8.75 -4.6 90)
 			(size 1.5 0.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "RBG_LED_DATA")
+			(net "RGB_LED_DATA")
 			(uuid "b97142a3-dc40-4685-b679-f1aada6e79e3")
 		)
 		(pad "5" smd rect
@@ -18582,7 +18582,7 @@
 			(size 1.5 0.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.1)
-			(net "RBG_LED_DATA")
+			(net "RGB_LED_DATA")
 			(pinfunction "DIN")
 			(pintype "input")
 			(uuid "11336b84-d989-40ba-88e7-0348a904421a")
@@ -30309,7 +30309,7 @@
 		(end 134.0696 74.4608)
 		(width 0.15)
 		(layer "F.Cu")
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "374c435c-36b7-4a24-80ba-800a4a7833f8")
 	)
 	(segment
@@ -30317,7 +30317,7 @@
 		(end 133.05 73.4412)
 		(width 0.15)
 		(layer "F.Cu")
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "43989c7c-7c5e-4d99-8e7a-c26884a3abd1")
 	)
 	(segment
@@ -30325,7 +30325,7 @@
 		(end 146.7223 72.3902)
 		(width 0.15)
 		(layer "F.Cu")
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "72a3f454-69d7-490d-b551-cef5f922d564")
 	)
 	(segment
@@ -30333,7 +30333,7 @@
 		(end 134.2127 74.4608)
 		(width 0.15)
 		(layer "F.Cu")
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "921e63e4-b11f-41e2-86d0-f90865b30327")
 	)
 	(segment
@@ -30341,7 +30341,7 @@
 		(end 146.8625 72.25)
 		(width 0.15)
 		(layer "F.Cu")
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "c3a5e747-a15b-43f3-afeb-6c7c36ca7508")
 	)
 	(via
@@ -30359,7 +30359,7 @@
 			(back no)
 		)
 		(filling no)
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "7a30b886-6b1b-4d89-b983-c684c02df772")
 	)
 	(via
@@ -30377,7 +30377,7 @@
 			(back no)
 		)
 		(filling no)
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "a9ee1f0b-3e6c-4af4-b4e1-9439a46a1a5f")
 	)
 	(segment
@@ -30385,7 +30385,7 @@
 		(end 136.2833 72.3902)
 		(width 0.15)
 		(layer "B.Cu")
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "147af8a3-c44f-4f9a-8c45-b3c2fd13c1b2")
 	)
 	(segment
@@ -30393,7 +30393,7 @@
 		(end 146.7223 72.3902)
 		(width 0.15)
 		(layer "B.Cu")
-		(net "RBG_LED_DATA")
+		(net "RGB_LED_DATA")
 		(uuid "9cc2f1e6-fe70-48f7-a362-cea6a257576b")
 	)
 	(segment
