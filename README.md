@@ -13,8 +13,8 @@ full build documentation.
 BlueBuzzah consists of two synchronized haptic gloves that deliver precisely
 timed vibration patterns to the fingertips. Each glove requires:
 
-- **Custom PCB** built around the Seeed XIAO ESP32-S3 (MCU + BLE), with five
-  DRV2605L haptic drivers, a TCA9548A I2C multiplexer, an LSM6DS3 IMU, a
+- **Custom PCB** built around the ESP32-S3-WROOM-1U-N8R8 module (MCU + BLE), with
+  five DRV2605L haptic drivers, a TCA9548A I2C multiplexer, an LSM6DS3 IMU, a
   WS2812B status LED, and five LRA motors (index, middle, ring, pinky, thumb)
 - **Firmware** from the [BlueBuzzah-Firmware](https://github.com/BlueBuzzah/BlueBuzzah-Firmware) repository
 - **Enclosure** — the v3 wearable enclosure has not been designed yet; see the
@@ -47,7 +47,10 @@ assembly:
 - `jlc_pcb_gerbers.zip` — Gerber files for PCB manufacturing
 - `BOM_JCLPCB_BlueBuzzah_v3.csv` — bill of materials
 - `CPL_JLCPCB_BlueBuzzah_v3-all-pos.csv` — pick-and-place positions
+- `ORDERING.md` — step-by-step JLCPCB ordering notes
+- `make_jlcpcb.py` — rebuilds these order files from the KiCad sources
 - `kicad/` — KiCad schematic and PCB source files
+- `panel/` — the KiKit panel the order files are built from
 
 Upload the Gerber zip, BOM, and CPL to JLCPCB's SMT assembly service to order the
 board fully assembled. See the wiki's "Ordering the PCB" page for details.
