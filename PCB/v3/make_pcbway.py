@@ -44,7 +44,7 @@ PARTS = {
     'C2874885': ('Worldsemi', 'WS2812B-V5/W', 'Addressable RGB LED', 'SMD5050-4P', 'Moisture sensitive. Alternate: Worldsemi WS2812B-B/W (LCSC C114586).'),
     'C3001948': ('UMW', 'PESD5V0L1UL', 'ESD diode 5V', 'SOD-882', 'Cathode is pad 1, at the closed end of the silkscreen outline.'),
     'C8598': ('JSCJ', 'B5819W SL', 'Schottky diode 40V', 'SOD-123', ''),
-    'C5175239': ('HDGC', 'HDGC2001WR-2P', 'Header 2-pin 2 mm right angle', 'Through hole, right angle, 2 mm pitch', 'Alternate: JST S2B-PH-K-S(LF)(SN) (LCSC C173752).'),
+    'C5175239': ('HDGC', 'HDGC2001WR-2P', 'Header 2-pin 2 mm right angle', 'Through hole, right angle, 2 mm pitch', 'No substitutes: the battery polarity depends on this part.'),
     'C165948': ('Korean Hroparts Elec', 'TYPE-C-31-M-12', 'USB-C receptacle 16-pin', 'SMD', 'Four shell tabs are through-hole and must be soldered.'),
     'C15127': ('AOS', 'AO3401A', 'MOSFET P-channel 30V 4A', 'SOT-23', ''),
     'C8545': ('JSCJ', '2N7002', 'MOSFET N-channel 60V 115mA', 'SOT-23', ''),
