@@ -65,7 +65,7 @@ LCSC_BY_VALUE_FOOTPRINT = {
     ('4.7k', 'R_0402_1005Metric'): 'C25900',
     ('10k', 'R_0402_1005Metric'): 'C25744',
     ('100k', 'R_0402_1005Metric'): 'C25741',
-    ('6.8k', 'R_0402_1005Metric'): 'C25917',
+    ('5.1k', 'R_0402_1005Metric'): 'C25905',
     ('DRV2605LDGS', 'VSSOP-10_3x3mm_P0.5mm'): 'C527464',
     ('TCA9548APWR', 'TSSOP-24_4.4x7.8mm_P0.65mm'): 'C130026',
     ('LSM6DS3', 'LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y'): 'C967633',
