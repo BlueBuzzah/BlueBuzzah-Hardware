@@ -37,7 +37,7 @@ U1's pads are 0.15 mm apart, under PCBWay's 0.19 mm minimum for a solder mask da
 
 U21 pad 2 and U23 pad 2 each have a 0.2 mm via in the pad, because neither has room to move it. They're unfilled, like the board's other vias, so tell PCBWay they're intentional if it asks.
 
-The BOM's notes list checked alternates for D1, C17, R60, R61, R64, R67 and R68, and allow any 1% 0402 equivalent for every resistor. For any other part PCBWay can't source, change it in `make_pcbway.py` and rebuild, so the files stay correct for the next order.
+The BOM's notes list checked alternates for D1, C17, R60, R61, R64, R67 and R68, and allow any 1% 0402 equivalent for every resistor. Don't substitute J1 to J6: the battery polarity was confirmed with the HDGC2001WR-2P, and another header might seat the plug differently. For any other part PCBWay can't source, change it in `make_pcbway.py` and rebuild, so the files stay correct for the next order.
 
 ## Panel Note
 
