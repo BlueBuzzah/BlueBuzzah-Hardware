@@ -28,7 +28,7 @@ Use the three order files in this folder together, unchanged. They describe one 
 
    The Gerbers don't carry color or finish, so these values have to be set on the order.
 
-2. Turn on assembly, choose turnkey, and assemble the top side. The board has 76 SMT parts and 7 through-hole parts (J1 to J6 and SW1).
+2. Turn on assembly, choose turnkey, and assemble the top side. The board has 28 unique parts, 76 SMT (SMD) parts and 7 through-hole parts (J1 to J6 and SW1).
 3. Upload `BlueBuzzah_v3_BOM.csv` and `BlueBuzzah_v3_centroid.csv`.
 4. Add the panel note below to the order.
 5. Review the production files PCBWay sends before approving them. The centroid uses KiCad's rotations, and `Pad X` and `Pad Y` give each part's pin 1. Check D1, D2, D11, U1 and the SOT-23 parts in particular. D2's cathode (pad 1) belongs at the closed end of the silkscreen outline, toward the bottom of the board.
