@@ -1,53 +1,54 @@
-# BuzzahBuddy.com hero. The pair from bluebuzzah-pair.py, spread to make room for a phone
-# showing BuzzahBuddy's Session screen; perspective camera, studio light, shadow catcher; renders itself.
+# Website hero renders. The pair from bluebuzzah-pair.py, spread to make room for a phone
+# showing BuzzahBuddy's Session screen (unless "no_phone"); perspective camera, studio light, shadow catcher; renders itself.
 import os, bmesh
 src = open(os.path.join(ENV["scripts"], "configs", "product", "bluebuzzah-pair.py")).read()
 src = src.replace("DEVICES = (-66.0, 66.0)", f"DEVICES = {tuple(cfg.get('devices', [-104.0, 104.0]))}")
 exec(src)
 
-# ---- phone: rounded slab, bezel and screen, lying flat in front, centred between the cases
-PW, PH, PT, PR = 71.5, 147.0, 7.8, 10.0   # generic phone, mm
-PX, PY, PROT = cfg.get("phone", [0.0, 52.0, 0.0])
-def rrect(w, h, r, n=10):
-    pts = []
-    for cx, cy, a0 in ((w/2-r, h/2-r, 0), (-w/2+r, h/2-r, 90), (-w/2+r, -h/2+r, 180), (w/2-r, -h/2+r, 270)):
-        for k in range(n + 1):
-            a = math.radians(a0 + 90 * k / n); pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
-    return pts
-def slab(name, pts, z0, z1, material, uv=None):
-    bm = bmesh.new()
-    bot = [bm.verts.new((x, y, z0)) for x, y in pts]; top = [bm.verts.new((x, y, z1)) for x, y in pts]
-    ft = bm.faces.new(top); bm.faces.new(list(reversed(bot)))
-    for i in range(len(pts)):
-        j = (i + 1) % len(pts); bm.faces.new((bot[i], bot[j], top[j], top[i]))
-    if uv:
-        lay = bm.loops.layers.uv.new()
-        for l in ft.loops: l[lay].uv = uv(l.vert.co)
-    me = bpy.data.meshes.new(name); bm.to_mesh(me); bm.free()
-    o = bpy.data.objects.new(name, me); bpy.context.scene.collection.objects.link(o)
-    o.data.materials.append(material); o["grp"] = "phone"; objs.append(o)
-    o.matrix_world = Matrix.Translation((PX, PY, 0)) @ Matrix.Rotation(math.radians(PROT), 4, "Z")
-    return o
+# ---- phone: rounded slab, bezel and screen, lying flat in front, centred between the cases (skipped with "no_phone")
+if not cfg.get("no_phone"):
+    PW, PH, PT, PR = 71.5, 147.0, 7.8, 10.0   # generic phone, mm
+    PX, PY, PROT = cfg.get("phone", [0.0, 52.0, 0.0])
+    def rrect(w, h, r, n=10):
+        pts = []
+        for cx, cy, a0 in ((w/2-r, h/2-r, 0), (-w/2+r, h/2-r, 90), (-w/2+r, -h/2+r, 180), (w/2-r, -h/2+r, 270)):
+            for k in range(n + 1):
+                a = math.radians(a0 + 90 * k / n); pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
+        return pts
+    def slab(name, pts, z0, z1, material, uv=None):
+        bm = bmesh.new()
+        bot = [bm.verts.new((x, y, z0)) for x, y in pts]; top = [bm.verts.new((x, y, z1)) for x, y in pts]
+        ft = bm.faces.new(top); bm.faces.new(list(reversed(bot)))
+        for i in range(len(pts)):
+            j = (i + 1) % len(pts); bm.faces.new((bot[i], bot[j], top[j], top[i]))
+        if uv:
+            lay = bm.loops.layers.uv.new()
+            for l in ft.loops: l[lay].uv = uv(l.vert.co)
+        me = bpy.data.meshes.new(name); bm.to_mesh(me); bm.free()
+        o = bpy.data.objects.new(name, me); bpy.context.scene.collection.objects.link(o)
+        o.data.materials.append(material); o["grp"] = "phone"; objs.append(o)
+        o.matrix_world = Matrix.Translation((PX, PY, 0)) @ Matrix.Rotation(math.radians(PROT), 4, "Z")
+        return o
 
-def pbr(h, rough, metal=0.0, coat=0.0):
-    m = bpy.data.materials.new(h + "x"); m.use_nodes = True; b = m.node_tree.nodes["Principled BSDF"]
-    b.inputs["Base Color"].default_value = lin(h); b.inputs["Roughness"].default_value = rough
-    b.inputs["Metallic"].default_value = metal; b.inputs["Coat Weight"].default_value = coat
-    return m
-frame = slab("phone-body", rrect(PW, PH, PR), 0.0, PT, pbr("#2B3140", 0.35, 0.8))
-glass = slab("phone-glass", rrect(PW - 1.6, PH - 1.6, PR - 0.8), PT, PT + 0.25, pbr("#05070D", 0.08, 0.0, 1.0))
-SW, SH = 66.0, 66.0 * 2622 / 1206                 # screen keeps the screenshot's aspect
-scr = bpy.data.materials.new("screen"); scr.use_nodes = True; nt = scr.node_tree
-img = nt.nodes.new("ShaderNodeTexImage"); img.image = bpy.data.images.load(cfg["screen"]); img.interpolation = "Cubic"
-em = nt.nodes.new("ShaderNodeEmission"); em.inputs["Strength"].default_value = cfg.get("screen_glow", 1.0)
-gl = nt.nodes.new("ShaderNodeBsdfGlossy"); gl.inputs["Roughness"].default_value = 0.05
-mix = nt.nodes.new("ShaderNodeMixShader"); mix.inputs[0].default_value = 0.06
-nt.links.new(img.outputs["Color"], em.inputs["Color"]); nt.links.new(em.outputs[0], mix.inputs[1])
-nt.links.new(gl.outputs[0], mix.inputs[2])
-nt.links.new(mix.outputs[0], nt.nodes["Material Output"].inputs["Surface"])
-nt.nodes.remove(nt.nodes["Principled BSDF"])
-slab("phone-screen", rrect(SW, SH, 7.5), PT + 0.25, PT + 0.26, scr,
-     uv=lambda co: (co.x / SW + 0.5, co.y / SH + 0.5))
+    def pbr(h, rough, metal=0.0, coat=0.0):
+        m = bpy.data.materials.new(h + "x"); m.use_nodes = True; b = m.node_tree.nodes["Principled BSDF"]
+        b.inputs["Base Color"].default_value = lin(h); b.inputs["Roughness"].default_value = rough
+        b.inputs["Metallic"].default_value = metal; b.inputs["Coat Weight"].default_value = coat
+        return m
+    frame = slab("phone-body", rrect(PW, PH, PR), 0.0, PT, pbr("#2B3140", 0.35, 0.8))
+    glass = slab("phone-glass", rrect(PW - 1.6, PH - 1.6, PR - 0.8), PT, PT + 0.25, pbr("#05070D", 0.08, 0.0, 1.0))
+    SW, SH = 66.0, 66.0 * 2622 / 1206                 # screen keeps the screenshot's aspect
+    scr = bpy.data.materials.new("screen"); scr.use_nodes = True; nt = scr.node_tree
+    img = nt.nodes.new("ShaderNodeTexImage"); img.image = bpy.data.images.load(cfg["screen"]); img.interpolation = "Cubic"
+    em = nt.nodes.new("ShaderNodeEmission"); em.inputs["Strength"].default_value = cfg.get("screen_glow", 1.0)
+    gl = nt.nodes.new("ShaderNodeBsdfGlossy"); gl.inputs["Roughness"].default_value = 0.05
+    mix = nt.nodes.new("ShaderNodeMixShader"); mix.inputs[0].default_value = 0.06
+    nt.links.new(img.outputs["Color"], em.inputs["Color"]); nt.links.new(em.outputs[0], mix.inputs[1])
+    nt.links.new(gl.outputs[0], mix.inputs[2])
+    nt.links.new(mix.outputs[0], nt.nodes["Material Output"].inputs["Surface"])
+    nt.nodes.remove(nt.nodes["Principled BSDF"])
+    slab("phone-screen", rrect(SW, SH, 7.5), PT + 0.25, PT + 0.26, scr,
+         uv=lambda co: (co.x / SW + 0.5, co.y / SH + 0.5))
 
 # ---- shadow catcher ground
 bpy.ops.mesh.primitive_plane_add(size=2000, location=(0, 60, 0))

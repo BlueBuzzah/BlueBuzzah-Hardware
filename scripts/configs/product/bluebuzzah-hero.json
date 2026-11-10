@@ -1,0 +1,107 @@
+{
+ "dir": [
+  0,
+  -1.2,
+  2
+ ],
+ "fill": 0.12,
+ "margin": 0.03,
+ "spec": 0.05,
+ "default": "#4A5468",
+ "w": 2000,
+ "samples": 256,
+ "web_width": 2000,
+ "models": [
+  {
+   "model": "lower-shell"
+  },
+  {
+   "model": "upper-shell"
+  },
+  {
+   "model": "switch"
+  },
+  {
+   "model": "bluebuzzah-v3-pcb",
+   "name": "pcb",
+   "loc": [
+    -148.7,
+    82.5,
+    7.0
+   ]
+  },
+  {
+   "model": "shell"
+  },
+  {
+   "model": "lra-sled",
+   "name": "sled"
+  },
+  {
+   "model": "lra-motor",
+   "name": "motor",
+   "loc": [
+    0,
+    -1.5,
+    0.48
+   ]
+  },
+  {
+   "model": "wire-plug",
+   "name": "plug"
+  },
+  {
+   "model": "compression-spring",
+   "name": "spring1",
+   "loc": [
+    0,
+    -8.7,
+    -1.3
+   ]
+  },
+  {
+   "model": "compression-spring",
+   "name": "spring2",
+   "loc": [
+    5.25,
+    8.7,
+    -1.3
+   ]
+  },
+  {
+   "model": "compression-spring",
+   "name": "spring3",
+   "loc": [
+    -5.25,
+    8.7,
+    -1.3
+   ]
+  },
+  {
+   "model": "wire-lead",
+   "name": "lead"
+  },
+  {
+   "model": "lid"
+  },
+  {
+   "model": "finger-cup",
+   "name": "cup"
+  },
+  {
+   "model": "pin"
+  },
+  {
+   "model": "finger-support",
+   "name": "support"
+  }
+ ],
+ "hook": "{scripts}/configs/product/buzzahbuddy-hero.py",
+ "out": "{out}/images/v3/product/bluebuzzah-hero.png",
+ "key": 0.12,
+ "no_phone": true,
+ "devices": [
+  -68.0,
+  68.0
+ ]
+}
