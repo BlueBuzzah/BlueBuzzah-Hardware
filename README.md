@@ -70,12 +70,12 @@ board fully assembled. See the wiki's "Ordering the PCB" page for details.
 
 ## License
 
-Each part of this repository is under the license that fits it:
+Each part of this repository is under the license that fits it. Where two rows overlap, the more specific path wins.
 
 | Path | License | File |
 | --- | --- | --- |
 | `PCB/v3/` (KiCad sources, panel, Gerbers, BOM, CPL, PCBWay package) | CERN-OHL-S v2 | [`LICENSE-CERN-OHL-S-2.0.txt`](LICENSE-CERN-OHL-S-2.0.txt) |
-| `models/`, `README.md`, `PCB/v3/*.md`, `scripts/README.md` | CC BY-SA 4.0 | [`LICENSE-CC-BY-SA-4.0.txt`](LICENSE-CC-BY-SA-4.0.txt) |
+| `models/`, `README.md`, `PCB/v3/**/*.md`, `scripts/README.md` | CC BY-SA 4.0 | [`LICENSE-CC-BY-SA-4.0.txt`](LICENSE-CC-BY-SA-4.0.txt) |
 | `scripts/`, `tools/`, `PCB/v3/make_*.py` | MIT | [`LICENSE`](LICENSE) |
 
 These third-party files are not relicensed and keep their own licenses:
@@ -84,5 +84,6 @@ These third-party files are not relicensed and keep their own licenses:
 - `PCB/v3/kicad/3dmodels/ESP32-S3-WROOM-1U.step`: Espressif's vendor model.
 - `PCB/v3/kicad/Libraries/` and the KiCad standard library parts the board uses: the KiCad library license (CC BY-SA 4.0 with KiCad's exception for designs made with them).
 - `scripts/fonts/`: SIL Open Font License (OFL files alongside).
+- The board exports (`PCB/v3/kicad/BlueBuzzah_v3.step`, `models/BlueBuzzah-v3-pcb-model.step`, `models/bluebuzzah-v3-pcb.glb`, `models/bluebuzzah-exploded.glb`) include the part models above, which keep their own licenses.
 
 The BlueBuzzah and BuzzahBuddy names and logos are not covered by these licenses. See [Licenses and the BlueBuzzah name](https://bluebuzzah.com/terms#licenses).
