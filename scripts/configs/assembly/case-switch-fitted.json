@@ -1,0 +1,19 @@
+{
+ "dir": [1.2, -1.6, 1.1], "fill": 0.86, "margin": 0.05, "spec": 0.05, "default": "#4A5468",
+ "w": 1600, "samples": 160, "web_width": 900,
+ "glb": "{work}/pcb/bluebuzzah-v3-pcb.glb",
+ "remove": ["SW_CuK_JS202011AQN_DPDT_Angled", "SW_CK_JS202011AQN_DPDT_Angled"],
+ "glb_loc": [-0.1487, 0.0825, 0.007],
+ "glb_group": "pcb",
+ "parts": "{work}/case",
+ "only": ["lower-shell", "switch"],
+ "stl_scale": 0.001,
+ "colors": {"switch": "#8A97B0"},
+ "builds": [
+  {"file": "{scripts}/builders/switch.py", "group": "pcb", "xform": {"loc": [-0.1487, 0.0825, 0.007]}},
+  {"file": "{scripts}/builders/screw.py", "group": "screws", "cfg": {"at": [[-17.4, 32.4, 0], [10.9, 7.5, 0]]},
+   "xform": {"scale": 0.001, "loc": [0, 0, 0.008556]}}
+ ],
+ "hook": "{scripts}/configs/main-parts/bluebuzzah-v3-pcb.py",
+ "out": "{out}/images/v3/assembly/case-switch-fitted.png"
+}
