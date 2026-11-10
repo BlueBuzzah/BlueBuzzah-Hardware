@@ -95,5 +95,15 @@ sc.view_settings.view_transform = cfg.get("view", "AgX"); sc.view_settings.look 
 R.image_settings.file_format = "PNG"; R.image_settings.color_mode = "RGBA"
 R.filepath = cfg["out"]; os.makedirs(os.path.dirname(cfg["out"]), exist_ok=True)
 bpy.ops.render.render(write_still=True)
+
+# The soft shadows spread past the parts, so the frame would cut them with a hard edge. Fade the alpha to 0 over the
+# outer "fade" fraction of the shorter side (smoothstep); "margin" keeps the parts themselves clear of that band.
+import numpy as np
+im = bpy.data.images.load(cfg["out"]); w, h = im.size
+px = np.array(im.pixels[:], dtype=np.float32).reshape(h, w, 4)
+band = cfg.get("fade", 0.12) * min(w, h)
+ramp = lambda n: (lambda t: t * t * (3 - 2 * t))(np.clip(np.minimum(np.arange(n), np.arange(n)[::-1]) / band, 0, 1))
+px[:, :, 3] *= ramp(h)[:, None] * ramp(w)[None, :]
+im.pixels[:] = px.ravel(); im.filepath_raw = cfg["out"]; im.file_format = "PNG"; im.save()
 print("INFO rendered", cfg["out"])
 raise SystemExit
