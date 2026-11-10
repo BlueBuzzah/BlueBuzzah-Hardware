@@ -7,6 +7,11 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(company "BlueBuzzah Partners")
+		(comment 1 "Copyright BlueBuzzah Partners. Licensed under CERN-OHL-S-2.0.")
+		(comment 2 "Source: https://github.com/BlueBuzzah/BlueBuzzah-Hardware")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" power)

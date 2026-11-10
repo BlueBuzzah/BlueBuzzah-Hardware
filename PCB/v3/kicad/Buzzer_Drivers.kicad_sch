@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "2360fd62-6722-43ad-8a50-a68817fa2ce4")
 	(paper "A4")
+	(title_block
+		(company "BlueBuzzah Partners")
+		(comment 1 "Copyright BlueBuzzah Partners. Licensed under CERN-OHL-S-2.0.")
+		(comment 2 "Source: https://github.com/BlueBuzzah/BlueBuzzah-Hardware")
+	)
 	(lib_symbols
 		(symbol "Device:C"
 			(pin_numbers

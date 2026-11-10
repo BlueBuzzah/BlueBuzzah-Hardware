@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "01224483-b41d-4415-9e0e-f93aeac974ec")
 	(paper "A3")
+	(title_block
+		(company "BlueBuzzah Partners")
+		(comment 1 "Copyright BlueBuzzah Partners. Licensed under CERN-OHL-S-2.0.")
+		(comment 2 "Source: https://github.com/BlueBuzzah/BlueBuzzah-Hardware")
+	)
 	(lib_symbols
 		(symbol "RF_Module:ESP32-S3-WROOM-1"
 			(exclude_from_sim no)
