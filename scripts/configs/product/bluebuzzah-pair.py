@@ -1,4 +1,4 @@
-# Product shot: two finished gloves' electronics, each a closed case with 4 tactor leads (ports 2-5) running out of
+# Product shot: two finished gloves' electronics, each a closed case with 4 tactor leads (ports 1-4) running out of
 # the back-wall wire opening to a finished tactor. Builds one tactor at the origin, then copies the case and tactor
 # into place. The JST plugs, battery, antenna and screws sit under the closed upper shell, so they're left out.
 import os
@@ -10,9 +10,9 @@ case = [o for o in objs if o["grp"] in CASE]
 tactor = [o for o in objs if o["grp"] not in CASE]
 tz = -min((o.matrix_world @ Vector(c)).z for o in tactor for c in o.bound_box)  # stand the tactor on z = 0
 
-PORTS = (-8.8, 0.0, 8.8, 17.5)               # motor ports 2-5, case-frame x
+PORTS = (-17.6, -8.8, 0.0, 8.8)              # motor ports 1-4 (index, middle, ring, little), case-frame x
 SPREAD = ((-39, 102, 8), (-13, 113, 2.5), (13, 113, -2.5), (39, 102, -8))  # tactor x (from case centre), y, splay deg
-CX = 4.35                                    # centre of ports 2-5
+CX = -4.4                                    # centre of ports 1-4
 DEVICES = (-66.0, 66.0)                      # case x offsets
 EXIT = Vector((1.0, 27.0, 3.29))             # tactor-frame insulation end (x = +-1)
 
