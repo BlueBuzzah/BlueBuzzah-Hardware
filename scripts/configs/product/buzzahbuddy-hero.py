@@ -54,56 +54,58 @@ if not cfg.get("no_phone"):
 bpy.ops.mesh.primitive_plane_add(size=2000, location=(0, 60, 0))
 gnd = bpy.context.active_object; gnd.is_shadow_catcher = True
 
-# ---- perspective camera aimed at the scene centre, distance fitted to the bounds
-sc = bpy.context.scene
-pts = [o.matrix_world @ Vector(c) for o in objs for c in o.bound_box]
-ctr = sum(pts, Vector()) / len(pts) + Vector(cfg.get("aim", [0, 0, 0]))
-cam = bpy.data.objects.new("cam", bpy.data.cameras.new("cam")); sc.collection.objects.link(cam); sc.camera = cam
-cam.data.lens = cfg.get("lens", 85); cam.data.clip_end = 100000
-d = Vector(cfg.get("camdir", [0.22, -1.0, 0.95])).normalized()
-cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
-R = sc.render; R.resolution_x = cfg["w"]; R.resolution_y = round(cfg["w"] / cfg.get("aspect", 1.6))
-from bpy_extras.object_utils import world_to_camera_view
-dist = 400.0
-for _ in range(30):  # grow/shrink until the content fills the frame with the margin
+# --info and model export leave the scene to brender; only a plain run renders here
+if not os.environ.get("BB_MODE"):
+    # ---- perspective camera aimed at the scene centre, distance fitted to the bounds
+    sc = bpy.context.scene
+    pts = [o.matrix_world @ Vector(c) for o in objs for c in o.bound_box]
+    ctr = sum(pts, Vector()) / len(pts) + Vector(cfg.get("aim", [0, 0, 0]))
+    cam = bpy.data.objects.new("cam", bpy.data.cameras.new("cam")); sc.collection.objects.link(cam); sc.camera = cam
+    cam.data.lens = cfg.get("lens", 85); cam.data.clip_end = 100000
+    d = Vector(cfg.get("camdir", [0.22, -1.0, 0.95])).normalized()
+    cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
+    R = sc.render; R.resolution_x = cfg["w"]; R.resolution_y = round(cfg["w"] / cfg.get("aspect", 1.6))
+    from bpy_extras.object_utils import world_to_camera_view
+    dist = 400.0
+    for _ in range(30):  # grow/shrink until the content fills the frame with the margin
+        cam.location = ctr + d * dist; bpy.context.view_layer.update()
+        v = [world_to_camera_view(sc, cam, p) for p in pts]
+        span = max(max(q.x for q in v) - min(q.x for q in v), max(q.y for q in v) - min(q.y for q in v))
+        dist *= span / (1 - 2 * cfg.get("margin", 0.05))
     cam.location = ctr + d * dist; bpy.context.view_layer.update()
     v = [world_to_camera_view(sc, cam, p) for p in pts]
-    span = max(max(q.x for q in v) - min(q.x for q in v), max(q.y for q in v) - min(q.y for q in v))
-    dist *= span / (1 - 2 * cfg.get("margin", 0.05))
-cam.location = ctr + d * dist; bpy.context.view_layer.update()
-v = [world_to_camera_view(sc, cam, p) for p in pts]
-cam.data.shift_x = ((max(q.x for q in v) + min(q.x for q in v)) / 2 - 0.5) * (1 if R.resolution_x >= R.resolution_y else R.resolution_x / R.resolution_y)
-cam.data.shift_y = ((max(q.y for q in v) + min(q.y for q in v)) / 2 - 0.5) * (R.resolution_y / R.resolution_x if R.resolution_x >= R.resolution_y else 1)
+    cam.data.shift_x = ((max(q.x for q in v) + min(q.x for q in v)) / 2 - 0.5) * (1 if R.resolution_x >= R.resolution_y else R.resolution_x / R.resolution_y)
+    cam.data.shift_y = ((max(q.y for q in v) + min(q.y for q in v)) / 2 - 0.5) * (R.resolution_y / R.resolution_x if R.resolution_x >= R.resolution_y else 1)
 
-# ---- studio light: big soft key (front-left, high), cool rim from behind, faint world fill
-world = bpy.data.worlds.new("w"); sc.world = world; world.use_nodes = True
-world.node_tree.nodes["Background"].inputs[0].default_value = lin("#C9D6F2")
-world.node_tree.nodes["Background"].inputs[1].default_value = cfg.get("fill", 0.35)
-def area(name, loc, energy, size, color):
-    L = bpy.data.lights.new(name, "AREA"); L.energy = energy; L.size = size; L.color = lin(color)[:3]
-    o = bpy.data.objects.new(name, L); sc.collection.objects.link(o); o.location = loc
-    o.rotation_euler = (ctr - Vector(loc)).to_track_quat("-Z", "Y").to_euler()
-k = cfg.get("key", 1.0)
-area("key", ctr + Vector((-260, -320, 420)), 9.0e7 * k, 380, "#FFF6EC")
-area("rim", ctr + Vector((120, 520, 160)), 6.0e7 * k, 300, "#8FB6FF")
-area("kick", ctr + Vector((420, -60, 140)), 2.0e7 * k, 200, "#DDE7FF")
+    # ---- studio light: big soft key (front-left, high), cool rim from behind, faint world fill
+    world = bpy.data.worlds.new("w"); sc.world = world; world.use_nodes = True
+    world.node_tree.nodes["Background"].inputs[0].default_value = lin("#C9D6F2")
+    world.node_tree.nodes["Background"].inputs[1].default_value = cfg.get("fill", 0.35)
+    def area(name, loc, energy, size, color):
+        L = bpy.data.lights.new(name, "AREA"); L.energy = energy; L.size = size; L.color = lin(color)[:3]
+        o = bpy.data.objects.new(name, L); sc.collection.objects.link(o); o.location = loc
+        o.rotation_euler = (ctr - Vector(loc)).to_track_quat("-Z", "Y").to_euler()
+    k = cfg.get("key", 1.0)
+    area("key", ctr + Vector((-260, -320, 420)), 9.0e7 * k, 380, "#FFF6EC")
+    area("rim", ctr + Vector((120, 520, 160)), 6.0e7 * k, 300, "#8FB6FF")
+    area("kick", ctr + Vector((420, -60, 140)), 2.0e7 * k, 200, "#DDE7FF")
 
-R.engine = "CYCLES"; sc.cycles.samples = int(os.environ.get("BB_SAMPLES", cfg.get("samples", 256)))
-sc.cycles.use_denoising = True; sc.cycles.device = "GPU"
-R.film_transparent = True
-sc.view_settings.view_transform = cfg.get("view", "AgX"); sc.view_settings.look = cfg.get("look", "None")
-R.image_settings.file_format = "PNG"; R.image_settings.color_mode = "RGBA"
-R.filepath = cfg["out"]; os.makedirs(os.path.dirname(cfg["out"]), exist_ok=True)
-bpy.ops.render.render(write_still=True)
+    R.engine = "CYCLES"; sc.cycles.samples = int(os.environ.get("BB_SAMPLES", cfg.get("samples", 256)))
+    sc.cycles.use_denoising = True; sc.cycles.device = "GPU"
+    R.film_transparent = True
+    sc.view_settings.view_transform = cfg.get("view", "AgX"); sc.view_settings.look = cfg.get("look", "None")
+    R.image_settings.file_format = "PNG"; R.image_settings.color_mode = "RGBA"
+    R.filepath = cfg["out"]; os.makedirs(os.path.dirname(cfg["out"]), exist_ok=True)
+    bpy.ops.render.render(write_still=True)
 
-# The soft shadows spread past the parts, so the frame would cut them with a hard edge. Fade the alpha to 0 over the
-# outer "fade" fraction of the shorter side (smoothstep); "margin" keeps the parts themselves clear of that band.
-import numpy as np
-im = bpy.data.images.load(cfg["out"]); w, h = im.size
-px = np.array(im.pixels[:], dtype=np.float32).reshape(h, w, 4)
-band = cfg.get("fade", 0.12) * min(w, h)
-ramp = lambda n: (lambda t: t * t * (3 - 2 * t))(np.clip(np.minimum(np.arange(n), np.arange(n)[::-1]) / band, 0, 1))
-px[:, :, 3] *= ramp(h)[:, None] * ramp(w)[None, :]
-im.pixels[:] = px.ravel(); im.filepath_raw = cfg["out"]; im.file_format = "PNG"; im.save()
-print("INFO rendered", cfg["out"])
-raise SystemExit
+    # The soft shadows spread past the parts, so the frame would cut them with a hard edge. Fade the alpha to 0 over the
+    # outer "fade" fraction of the shorter side (smoothstep); "margin" keeps the parts themselves clear of that band.
+    import numpy as np
+    im = bpy.data.images.load(cfg["out"]); w, h = im.size
+    px = np.array(im.pixels[:], dtype=np.float32).reshape(h, w, 4)
+    band = cfg.get("fade", 0.12) * min(w, h)
+    ramp = lambda n: (lambda t: t * t * (3 - 2 * t))(np.clip(np.minimum(np.arange(n), np.arange(n)[::-1]) / band, 0, 1))
+    px[:, :, 3] *= ramp(h)[:, None] * ramp(w)[None, :]
+    im.pixels[:] = px.ravel(); im.filepath_raw = cfg["out"]; im.file_format = "PNG"; im.save()
+    print("INFO rendered", cfg["out"])
+    raise SystemExit
