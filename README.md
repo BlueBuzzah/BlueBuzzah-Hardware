@@ -1,6 +1,6 @@
 # BlueBuzzah Hardware
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT%20%7C%20CERN--OHL--S%20%7C%20CC%20BY--SA-blue.svg)](#license)
 
 Hardware design files for BlueBuzzah v3, an open-source research platform for
 vibrotactile Coordinated Reset (vCR) stimulation, inspired by published research
@@ -24,6 +24,14 @@ The board arrives fully assembled from JLCPCB's SMT service, and the tactor's
 wire-to-LRA connection is a friction fit made by a 3D-printed wire plug — there
 is no soldering anywhere in the build.
 
+## Important notices
+
+BlueBuzzah devices are not FDA cleared or approved medical devices and not intended to diagnose, treat, cure, mitigate, or prevent any disease. The information provided through BlueBuzzah is for general wellness purposes only and not a substitute for professional medical advice, diagnosis, or treatment.
+
+**Important:** People with implanted electrodes from deep brain stimulation (DBS), heart pacemakers, or other internal electronic devices should take special precautions around all electronic devices, including BlueBuzzah. Consult your physician before use.
+
+Read the [safety page](https://bluebuzzah.com/docs/safety) and the [terms and safety](https://bluebuzzah.com/terms) page before you build or wear a pair.
+
 ## Repository Contents
 
 | Folder | Description |
@@ -31,7 +39,6 @@ is no soldering anywhere in the build.
 | **[PCB/v3/](PCB/v3/)** | Gerbers, BOM, pick-and-place (CPL), and KiCad sources for the v3 board |
 | **[models/](models/)** | CAD files for the board, tactor and case (`.step`, `.3mf`), and the `.glb` models used for the build guide's images |
 | **[scripts/](scripts/)** | Headless Blender scripts that render the build guide's images from those models; see its [README](scripts/README.md) |
-| **[archive/](archive/)** | Deprecated v2 hardware files, kept for historical reference only |
 
 ## Getting Started
 
@@ -56,7 +63,22 @@ board fully assembled. See the wiki's "Ordering the PCB" page for details.
 
 - **[BlueBuzzah-Firmware](https://github.com/BlueBuzzah/BlueBuzzah-Firmware)** - Firmware for the BlueBuzzah gloves.
 - **[BlueBuzzah-Updater](https://github.com/BlueBuzzah/BlueBuzzah-Updater)** - Desktop application for updating and configuring BlueBuzzah devices.
+- **[BlueBuzzah-Gloves](https://github.com/PWPInnovator898/BlueBuzzah-Gloves)** - The original v2 design, for reference.
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+Each part of this repository is under the license that fits it. Where two rows overlap, the more specific path wins.
+
+| Path | License | File |
+| --- | --- | --- |
+| `PCB/v3/` (KiCad sources, Gerbers, BOM, CPL) | CERN-OHL-S v2 | [`LICENSE-CERN-OHL-S-2.0.txt`](LICENSE-CERN-OHL-S-2.0.txt) |
+| `models/`, `README.md`, `PCB/v3/**/*.md`, `scripts/README.md` | CC BY-SA 4.0 | [`LICENSE-CC-BY-SA-4.0.txt`](LICENSE-CC-BY-SA-4.0.txt) |
+| `scripts/`, `tools/` | MIT | [`LICENSE`](LICENSE) |
+
+These third-party files are not relicensed and keep their own licenses:
+
+- The KiCad standard library parts and Seeed Studio's XIAO parts the board uses (the KiCad library license, and Seeed's OPL KiCad library license).
+- `scripts/fonts/`: SIL Open Font License (OFL files alongside).
+- The board exports (`models/BlueBuzzah-v3-pcb-model.step`, `models/bluebuzzah-v3-pcb.glb`, `models/bluebuzzah-exploded.glb`) include the part models above, which keep their own licenses.
+
+The BlueBuzzah and BuzzahBuddy names and logos are not covered by these licenses. See [Licenses and the BlueBuzzah name](https://bluebuzzah.com/terms#licenses).
