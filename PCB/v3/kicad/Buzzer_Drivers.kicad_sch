@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "2360fd62-6722-43ad-8a50-a68817fa2ce4")
 	(paper "A4")
+	(title_block
+		(company "BlueBuzzah Partners")
+		(comment 1 "Copyright BlueBuzzah Partners. Licensed under CERN-OHL-S-2.0.")
+		(comment 2 "Source: https://github.com/BlueBuzzah/BlueBuzzah-Hardware")
+	)
 	(lib_symbols
 		(symbol "Device:C"
 			(pin_numbers
@@ -290,7 +295,7 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+			(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3830,7 +3835,7 @@
 			(uuid "fb088d01-8d68-448f-8e51-125b2df80756")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C27")
 					(unit 1)
@@ -3895,7 +3900,7 @@
 			(uuid "7a565cc5-1bcc-4ecb-8d2a-d9c6f2fc484e")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR044")
 					(unit 1)
@@ -3964,7 +3969,7 @@
 			(uuid "481e3413-9977-4363-9b63-73457be9e005")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R27")
 					(unit 1)
@@ -4033,7 +4038,7 @@
 			(uuid "519be365-dbd4-488f-927c-a936e1c1998d")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C29")
 					(unit 1)
@@ -4101,7 +4106,7 @@
 			(uuid "715e7afd-53ba-478c-b8e1-053f8bd1194d")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR022")
 					(unit 1)
@@ -4170,7 +4175,7 @@
 			(uuid "11fe6754-29aa-4ac0-be73-3619a78bd6e5")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R31")
 					(unit 1)
@@ -4239,7 +4244,7 @@
 			(uuid "bed2c126-817e-4f82-bb2e-5739f465b725")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R32")
 					(unit 1)
@@ -4304,7 +4309,7 @@
 			(uuid "005b5124-dd88-4adb-a3de-a9fc806c1c0e")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR04")
 					(unit 1)
@@ -4370,7 +4375,7 @@
 			(uuid "e5142cf2-1aa6-49fb-8432-711939855b52")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR0107")
 					(unit 1)
@@ -4439,7 +4444,7 @@
 			(uuid "7b7522c6-e4f6-4dc6-b71c-acd9291bbff2")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C28")
 					(unit 1)
@@ -4508,7 +4513,7 @@
 			(uuid "4b871caa-29b5-4c1a-9161-e0fcd294f9b9")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R41")
 					(unit 1)
@@ -4576,7 +4581,7 @@
 			(uuid "793725f3-a8f9-4255-b8a6-ebb03129fae7")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR0103")
 					(unit 1)
@@ -4645,7 +4650,7 @@
 			(uuid "091ca567-19d7-4f83-a545-be4dcd4f01a7")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R26")
 					(unit 1)
@@ -4680,7 +4685,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 180.34 0)
 			(effects
 				(font
@@ -4739,7 +4744,7 @@
 			(uuid "1fec340e-70ee-490f-a5d8-27f17ddc2f77")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "U14")
 					(unit 1)
@@ -4804,7 +4809,7 @@
 			(uuid "a1bb7294-cb86-4781-a94f-795af58c601f")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR046")
 					(unit 1)
@@ -4873,7 +4878,7 @@
 			(uuid "d6f4882c-1ea8-4e0f-affb-14a63ea736ea")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R28")
 					(unit 1)
@@ -4942,7 +4947,7 @@
 			(uuid "03eb63e4-ede2-4530-881e-7a0c3e5947f8")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C32")
 					(unit 1)
@@ -4977,7 +4982,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 76.2 0)
 			(effects
 				(font
@@ -5036,7 +5041,7 @@
 			(uuid "d9047e8e-0135-4b8a-aa0c-6e12c94fc0d1")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "U11")
 					(unit 1)
@@ -5101,7 +5106,7 @@
 			(uuid "8b69c804-7ac7-496d-82c3-adc33d09e885")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR0104")
 					(unit 1)
@@ -5170,7 +5175,7 @@
 			(uuid "4942cef6-ba79-4a50-bfe7-adde5bd574bb")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C23")
 					(unit 1)
@@ -5239,7 +5244,7 @@
 			(uuid "9b8d48f4-3c21-4e89-b499-bbd9ac83c170")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C19")
 					(unit 1)
@@ -5308,7 +5313,7 @@
 			(uuid "ea65a9de-eb62-41b7-a6f2-ddf70c9287fc")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C22")
 					(unit 1)
@@ -5444,7 +5449,7 @@
 			(uuid "fe422c0c-ff76-4375-b9b6-cb81fb0afec4")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "U7")
 					(unit 1)
@@ -5513,7 +5518,7 @@
 			(uuid "85f1b04d-1cc4-42a4-923b-b6ed0d279ad9")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C31")
 					(unit 1)
@@ -5578,7 +5583,7 @@
 			(uuid "c124d2a5-f950-4ee8-980e-50f437be1e7b")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR045")
 					(unit 1)
@@ -5647,7 +5652,7 @@
 			(uuid "cd1b1917-e642-4020-b64e-ab89fdba94ef")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R43")
 					(unit 1)
@@ -5682,7 +5687,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 110.49 0)
 			(effects
 				(font
@@ -5741,7 +5746,7 @@
 			(uuid "c8324475-441d-40c6-83f3-6fcd9a93e2c3")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "U12")
 					(unit 1)
@@ -5810,7 +5815,7 @@
 			(uuid "cb4312e0-59de-43df-bdae-cc23ad77b352")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R34")
 					(unit 1)
@@ -5878,7 +5883,7 @@
 			(uuid "99bf2e02-2e17-4f6b-bdbf-a2a32322aa52")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR0105")
 					(unit 1)
@@ -5913,7 +5918,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 40.64 0)
 			(effects
 				(font
@@ -5972,7 +5977,7 @@
 			(uuid "809ef4bd-4020-4087-84fb-a6a5ba730409")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "U8")
 					(unit 1)
@@ -6041,7 +6046,7 @@
 			(uuid "f7413f06-f6ac-4924-bec1-591bdd999789")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C24")
 					(unit 1)
@@ -6106,7 +6111,7 @@
 			(uuid "26b858c3-6ed1-413b-8acc-7db3900190e9")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR07")
 					(unit 1)
@@ -6175,7 +6180,7 @@
 			(uuid "b323ed0e-e9ce-4e01-b56a-4ca66296ac69")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R42")
 					(unit 1)
@@ -6244,7 +6249,7 @@
 			(uuid "5addcaed-295e-4380-985f-d50fec9e0c6e")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R29")
 					(unit 1)
@@ -6312,7 +6317,7 @@
 			(uuid "13784dd6-ef86-4db5-88b5-b6f4266fb141")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR031")
 					(unit 1)
@@ -6377,7 +6382,7 @@
 			(uuid "79c58488-a85c-409d-bc13-d14672dba82e")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR05")
 					(unit 1)
@@ -6445,7 +6450,7 @@
 			(uuid "29f2b66f-ee94-46b6-86d3-3e97d7020a17")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR025")
 					(unit 1)
@@ -6513,7 +6518,7 @@
 			(uuid "f06bb8bf-9fa6-45ed-a2c0-bdd361f27df7")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR0102")
 					(unit 1)
@@ -6578,7 +6583,7 @@
 			(uuid "149db182-712e-463e-a808-a5df24f480f5")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR06")
 					(unit 1)
@@ -6646,7 +6651,7 @@
 			(uuid "05a8abce-9cad-4627-bdf8-6b8a01be03b6")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR015")
 					(unit 1)
@@ -6715,7 +6720,7 @@
 			(uuid "99509e64-bb1a-45b9-a864-c23c2242a368")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R55")
 					(unit 1)
@@ -6784,7 +6789,7 @@
 			(uuid "c0988490-5c71-4e8b-b171-0131cec50956")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C30")
 					(unit 1)
@@ -6852,7 +6857,7 @@
 			(uuid "dd9e4872-83d1-4c28-97ca-4a1bd1e85a37")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR029")
 					(unit 1)
@@ -6920,7 +6925,7 @@
 			(uuid "c4fedff5-4822-4a53-8a77-d64aaf47674f")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR021")
 					(unit 1)
@@ -6989,7 +6994,7 @@
 			(uuid "910288b1-d860-4528-8a44-294e3fcf226e")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R25")
 					(unit 1)
@@ -7054,7 +7059,7 @@
 			(uuid "e58b12a1-081f-4221-941c-d0d1808fe85b")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR043")
 					(unit 1)
@@ -7122,7 +7127,7 @@
 			(uuid "86c9a0d6-89d9-4bf7-adaf-b0e5d058e546")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR026")
 					(unit 1)
@@ -7191,7 +7196,7 @@
 			(uuid "852d4f2c-1667-49a9-954a-91f72d4043d8")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C26")
 					(unit 1)
@@ -7260,7 +7265,7 @@
 			(uuid "0d088f19-6532-4b07-b00d-49728b4970e2")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C21")
 					(unit 1)
@@ -7328,7 +7333,7 @@
 			(uuid "bed7e67a-d745-4024-a678-56b770d47421")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR032")
 					(unit 1)
@@ -7393,7 +7398,7 @@
 			(uuid "442401e5-8155-4d04-a03a-fcb26259e5b2")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR08")
 					(unit 1)
@@ -7462,7 +7467,7 @@
 			(uuid "914307c2-6f60-4945-b156-c17071a947bb")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R44")
 					(unit 1)
@@ -7531,7 +7536,7 @@
 			(uuid "d676357b-10f3-4931-9fec-a6382f79c94e")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C20")
 					(unit 1)
@@ -7600,7 +7605,7 @@
 			(uuid "c3c0341f-dad3-47dc-b1b7-ed93e7a8c3a2")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R35")
 					(unit 1)
@@ -7669,7 +7674,7 @@
 			(uuid "05edd4c9-ac52-4eaa-bc00-85b4f985826c")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C18")
 					(unit 1)
@@ -7738,7 +7743,7 @@
 			(uuid "7ab20b0a-3c81-4335-b0c7-d1ba4350d662")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R30")
 					(unit 1)
@@ -7807,7 +7812,7 @@
 			(uuid "3810ad01-98e6-4063-b3e3-0e962e642ffb")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "C25")
 					(unit 1)
@@ -7875,7 +7880,7 @@
 			(uuid "83ee88a6-c8ba-4710-9624-254b3ca05515")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "#PWR0106")
 					(unit 1)
@@ -7910,7 +7915,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "BlueBuzzah:VSSOP-10_3x3mm_P0.5mm"
 			(at 128.27 146.05 0)
 			(effects
 				(font
@@ -7969,7 +7974,7 @@
 			(uuid "fa8693b2-0b18-41ad-a110-fa902b44f632")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "U13")
 					(unit 1)
@@ -8038,7 +8043,7 @@
 			(uuid "0308c23f-8528-45a2-901b-7b8744fb1585")
 		)
 		(instances
-			(project "Penta_Buzzer_V2_1"
+			(project "BlueBuzzah_v3"
 				(path "/c416722b-9683-4442-adf3-585c478b2094/ee019bd7-f72f-4244-9b39-e59d51da9429"
 					(reference "R45")
 					(unit 1)

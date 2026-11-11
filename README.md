@@ -13,8 +13,8 @@ full build documentation.
 BlueBuzzah consists of two synchronized haptic gloves that deliver precisely
 timed vibration patterns to the fingertips. Each glove requires:
 
-- **Custom PCB** built around the Seeed XIAO ESP32-S3 (MCU + BLE), with five
-  DRV2605L haptic drivers, a TCA9548A I2C multiplexer, an LSM6DS3 IMU, a
+- **Custom PCB** built around the ESP32-S3-WROOM-1U-N8R8 module (MCU + BLE), with
+  five DRV2605L haptic drivers, a TCA9548A I2C multiplexer, an LSM6DS3 IMU, a
   WS2812B status LED, and five LRA motors (index, middle, ring, pinky, thumb)
 - **Firmware** from the [BlueBuzzah-Firmware](https://github.com/BlueBuzzah/BlueBuzzah-Firmware) repository
 - **Enclosure** — the v3 wearable enclosure has not been designed yet; see the
@@ -54,7 +54,10 @@ assembly:
 - `jlc_pcb_gerbers.zip` — Gerber files for PCB manufacturing
 - `BOM_JCLPCB_BlueBuzzah_v3.csv` — bill of materials
 - `CPL_JLCPCB_BlueBuzzah_v3-all-pos.csv` — pick-and-place positions
+- `ORDERING.md` — step-by-step JLCPCB ordering notes
+- `make_jlcpcb.py` — rebuilds these order files from the KiCad sources
 - `kicad/` — KiCad schematic and PCB source files
+- `panel/` — the KiKit panel the order files are built from
 
 Upload the Gerber zip, BOM, and CPL to JLCPCB's SMT assembly service to order the
 board fully assembled. See the wiki's "Ordering the PCB" page for details.
@@ -71,14 +74,16 @@ Each part of this repository is under the license that fits it. Where two rows o
 
 | Path | License | File |
 | --- | --- | --- |
-| `PCB/v3/` (KiCad sources, Gerbers, BOM, CPL) | CERN-OHL-S v2 | [`LICENSE-CERN-OHL-S-2.0.txt`](LICENSE-CERN-OHL-S-2.0.txt) |
+| `PCB/v3/` (KiCad sources, panel, Gerbers, BOM, CPL, PCBWay package) | CERN-OHL-S v2 | [`LICENSE-CERN-OHL-S-2.0.txt`](LICENSE-CERN-OHL-S-2.0.txt) |
 | `models/`, `README.md`, `PCB/v3/**/*.md`, `scripts/README.md` | CC BY-SA 4.0 | [`LICENSE-CC-BY-SA-4.0.txt`](LICENSE-CC-BY-SA-4.0.txt) |
-| `scripts/`, `tools/` | MIT | [`LICENSE`](LICENSE) |
+| `scripts/`, `tools/`, `PCB/v3/make_*.py` | MIT | [`LICENSE`](LICENSE) |
 
 These third-party files are not relicensed and keep their own licenses:
 
-- The KiCad standard library parts and Seeed Studio's XIAO parts the board uses (the KiCad library license, and Seeed's OPL KiCad library license).
+- `models/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step`: CERN-OHL-P v2, from KiCad's RoyalBlue54L demo.
+- `PCB/v3/kicad/3dmodels/ESP32-S3-WROOM-1U.step`: Espressif's vendor model.
+- `PCB/v3/kicad/Libraries/` and the KiCad standard library parts the board uses: the KiCad library license (CC BY-SA 4.0 with KiCad's exception for designs made with them).
 - `scripts/fonts/`: SIL Open Font License (OFL files alongside).
-- The board exports (`models/BlueBuzzah-v3-pcb-model.step`, `models/bluebuzzah-v3-pcb.glb`, `models/bluebuzzah-exploded.glb`) include the part models above, which keep their own licenses.
+- The board exports (`PCB/v3/kicad/BlueBuzzah_v3.step`, `models/BlueBuzzah-v3-pcb-model.step`, `models/bluebuzzah-v3-pcb.glb`, `models/bluebuzzah-exploded.glb`) include the part models above, which keep their own licenses.
 
 The BlueBuzzah and BuzzahBuddy names and logos are not covered by these licenses. See [Licenses and the BlueBuzzah name](https://bluebuzzah.com/terms#licenses).

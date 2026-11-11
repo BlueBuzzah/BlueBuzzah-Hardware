@@ -1,0 +1,25 @@
+(version 1)
+# These six pairs sit closer than KiCad's 0.25 mm courtyard margins, but their bodies and pads clear each other.
+(rule "R67 and C45"
+  (condition "(A.Reference == 'R67' && B.Reference == 'C45') || (A.Reference == 'C45' && B.Reference == 'R67')")
+  (constraint courtyard_clearance (min -1mm)))
+
+(rule "R67 and U20"
+  (condition "(A.Reference == 'R67' && B.Reference == 'U20') || (A.Reference == 'U20' && B.Reference == 'R67')")
+  (constraint courtyard_clearance (min -1mm)))
+
+(rule "C45 and U20"
+  (condition "(A.Reference == 'C45' && B.Reference == 'U20') || (A.Reference == 'U20' && B.Reference == 'C45')")
+  (constraint courtyard_clearance (min -1mm)))
+
+(rule "C45 and Q1"
+  (condition "(A.Reference == 'C45' && B.Reference == 'Q1') || (A.Reference == 'Q1' && B.Reference == 'C45')")
+  (constraint courtyard_clearance (min -1mm)))
+
+(rule "SW2 and R43"
+  (condition "(A.Reference == 'SW2' && B.Reference == 'R43') || (A.Reference == 'R43' && B.Reference == 'SW2')")
+  (constraint courtyard_clearance (min -1mm)))
+
+(rule "SW2 and R45"
+  (condition "(A.Reference == 'SW2' && B.Reference == 'R45') || (A.Reference == 'R45' && B.Reference == 'SW2')")
+  (constraint courtyard_clearance (min -1mm)))

@@ -6,8 +6,6 @@ WORK = os.environ["WORK"]                  # scratch folder for intermediate mes
 MODELS = os.path.join(HW, "models")
 TACTOR_STEP = os.environ.get("TACTOR_STEP", os.path.join(MODELS, "BlueBuzzah-v3-tactor.step"))
 CASE_STEP = os.environ.get("CASE_STEP", os.path.join(MODELS, "BlueBuzzah-v3-shell.step"))
-BOARD_STEP = os.environ.get("BOARD_STEP", os.path.join(MODELS, "BlueBuzzah-v3-pcb-model.step"))
-XIAO_STEP = os.environ.get("XIAO_STEP", os.path.join(MODELS, "XIAO-ESP32S3-v2.step"))  # Seeed's XIAO ESP32-S3 model
 
 def load(step):
     doc = FreeCAD.newDocument("d"); Import.insert(step, doc.Name)
