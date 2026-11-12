@@ -32,6 +32,8 @@ Sliding the switch off signals the firmware at once and cuts the 3.3 V supply in
 
 ## Building the Order Files
 
+Each release includes these files already built, in `BlueBuzzah-v3-PCB.zip`. To build them yourself:
+
 Install KiCad 10, quit it, then run:
 
 ```bash

@@ -1,0 +1,146 @@
+name: Release Build
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  jlcpcb:
+    name: Build JLCPCB ordering files
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0-full
+      options: --user root
+    env:
+      KICAD_PYTHON: /usr/bin/python3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      # make_jlcpcb.py builds a KiKit venv on top of KiCad's Python
+      - name: Install python3-venv
+        run: apt-get update -qq && apt-get install -y -qq --no-install-recommends python3-venv
+
+      - name: Build JLCPCB ordering files
+        run: python3 PCB/v3/make_jlcpcb.py
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: jlcpcb
+          path: PCB/v3/build/jlcpcb/
+          if-no-files-found: error
+
+  pcbway:
+    name: Build PCBWay ordering files
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0-full
+      options: --user root
+    env:
+      KICAD_PYTHON: /usr/bin/python3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Build PCBWay ordering files
+        run: python3 PCB/v3/make_pcbway.py
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pcbway
+          path: PCB/v3/build/pcbway/
+          if-no-files-found: error
+
+  package:
+    name: Zip and attach to release
+    needs: [jlcpcb, pcbway]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: jlcpcb
+          path: stage/pcb/JLCPCB
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: pcbway
+          path: stage/pcb/PCBWay
+
+      - name: Zip release files
+        run: |
+          set -euo pipefail
+          P=stage/parts
+          mkdir -p $P/case $P/tactor
+          for f in lower-shell upper-shell switch; do cp models/STL/$f.stl $P/case/; done
+          for f in finger-cup finger-sled lid pin-sm pin-xs pin shell sled wire-plug; do
+            cp models/STL/tactor-$f.stl $P/tactor/
+          done
+          cp models/BlueBuzzah-v3-parts.3mf LICENSE-CC-BY-SA-4.0.txt $P/
+
+          cp PCB/v3/ORDERING-JLCPCB.md stage/pcb/JLCPCB/
+          cp PCB/v3/ORDERING-PCBWay.md stage/pcb/PCBWay/ORDERING-PCBWAY.md
+          cp LICENSE-CERN-OHL-S-2.0.txt stage/pcb/
+
+          # -D: no directory entries, so the listing below is files only
+          (cd stage/parts && zip -qrX -D ../../BlueBuzzah-v3-parts.zip .)
+          (cd stage/pcb && zip -qrX -D ../../BlueBuzzah-v3-PCB.zip .)
+
+          check() {
+            diff <(unzip -Z1 "$1" | sort) <(printf '%s\n' "${@:2}" | sort) \
+              || { echo "::error::$1 contents don't match the expected layout"; exit 1; }
+          }
+          check BlueBuzzah-v3-parts.zip \
+            case/{lower-shell,upper-shell,switch}.stl \
+            tactor/tactor-{finger-cup,finger-sled,lid,pin-sm,pin-xs,pin,shell,sled,wire-plug}.stl \
+            BlueBuzzah-v3-parts.3mf LICENSE-CC-BY-SA-4.0.txt
+          check BlueBuzzah-v3-PCB.zip \
+            JLCPCB/BlueBuzzah_v3_JLCPCB_{gerbers.zip,BOM.csv,CPL.csv} JLCPCB/ORDERING-JLCPCB.md \
+            PCBWay/BlueBuzzah_v3_PCBWay_{gerbers.zip,BOM.csv,centroid.csv} PCBWay/ORDERING-PCBWAY.md \
+            LICENSE-CERN-OHL-S-2.0.txt
+          ls -lh BlueBuzzah-v3-*.zip
+
+      - name: Attest build provenance
+        id: attest
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: |
+            BlueBuzzah-v3-parts.zip
+            BlueBuzzah-v3-PCB.zip
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+          REPO: ${{ github.repository }}
+        run: gh release upload "$TAG" BlueBuzzah-v3-parts.zip BlueBuzzah-v3-PCB.zip --repo "$REPO" --clobber
+
+      - name: Build summary
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+          OWNER: ${{ github.repository_owner }}
+          ATTESTATION: ${{ steps.attest.outputs.attestation-id }}
+        run: |
+          {
+            echo "## Release Build Complete"
+            echo ""
+            echo "**Release:** $TAG"
+            echo "**Commit:** $GITHUB_SHA"
+            echo "**Assets:** BlueBuzzah-v3-parts.zip, BlueBuzzah-v3-PCB.zip"
+            echo ""
+            echo "### Build Provenance"
+            echo "Attestation ID: \`$ATTESTATION\`"
+            echo ""
+            echo "Verify with:"
+            echo "\`gh attestation verify BlueBuzzah-v3-parts.zip -o $OWNER\`"
+            echo "\`gh attestation verify BlueBuzzah-v3-PCB.zip -o $OWNER\`"
+          } >> "$GITHUB_STEP_SUMMARY"
