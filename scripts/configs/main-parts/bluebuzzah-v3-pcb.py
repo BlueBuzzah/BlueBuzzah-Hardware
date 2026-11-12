@@ -6,7 +6,7 @@ for m in bpy.data.objects["BlueBuzzah_v3_PCB"].data.materials:
     m.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = lin("#1F4FA0")
 
 # USB-C J10: the KiCad library has no 3D model for HRO TYPE-C-31-M-12, so the board STEP has no connector there.
-# models/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step (KiCad RoyalBlue54L demo, CERN-OHL-P v2) is already in the
+# models/STEP/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step (KiCad RoyalBlue54L demo, CERN-OHL-P v2) is already in the
 # footprint's frame; place it on the footprint (KiCad 142, 79.6, no rotation; board STEP = KiCad X, -Y; parts sit
 # on z 1.6 mm; metres, like the board .glb), then glb_loc. Skipped once the board STEP carries the connector itself.
 if not any("TYPE-C-31" in o.name for o in bpy.data.objects):

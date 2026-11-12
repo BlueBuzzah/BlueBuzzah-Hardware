@@ -1,6 +1,6 @@
 # The three pin options, left to right: short (3.74 mm), standard (4.24 mm), long (4.74 mm).
 # Only the long pin is in the tactor STEP file, so the meshes come from the pin STLs in the BlueBuzzah-Hardware
-# repo's models/ ($HW, default: this checkout). Each STL is upright, centred on x/y, with its bottom at z 0.
+# repo's models/STL/ ($HW, default: this checkout). Each STL is upright, centred on x/y, with its bottom at z 0.
 import os, struct
 hw = os.environ.get("HW", os.path.dirname(ENV["scripts"]))
 
@@ -16,8 +16,8 @@ def stl_mesh(path):
         ts.append(tuple(tri))
     return vs, ts
 
-for i, name in enumerate(("tactor-pin-1mm", "tactor-pin-0.5mm", "tactor-pin")):
-    vs, ts = stl_mesh(os.path.join(hw, "models", name + ".stl"))
+for i, name in enumerate(("tactor-pin-xs", "tactor-pin-sm", "tactor-pin")):
+    vs, ts = stl_mesh(os.path.join(hw, "models", "STL", name + ".stl"))
     me = bpy.data.meshes.new(name); me.from_pydata([(x + (i - 1) * 10.0, y, z) for x, y, z in vs], [], ts)
     me.update()
     o = bpy.data.objects.new(name, me); bpy.context.scene.collection.objects.link(o)

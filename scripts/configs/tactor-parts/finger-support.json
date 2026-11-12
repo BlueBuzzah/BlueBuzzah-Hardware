@@ -19,5 +19,5 @@
  "samples": 160,
  "out": "{out}/images/v3/tactor-parts/finger-support.png",
  "web_width": 900,
- "model": "{out}/models/finger-support.glb"
+ "model": "{out}/models/GLB/finger-support.glb"
 }

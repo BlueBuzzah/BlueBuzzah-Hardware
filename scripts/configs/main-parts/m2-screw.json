@@ -20,5 +20,5 @@
  ],
  "out": "{out}/images/v3/main-parts/m2-screw.png",
  "web_width": 900,
- "model": "{out}/models/m2-screw.glb"
+ "model": "{out}/models/GLB/m2-screw.glb"
 }

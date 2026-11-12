@@ -50,10 +50,10 @@ if "glb" in cfg:
         o["grp"] = cfg.get("glb_group", "glb")
     objs += glb_meshes
 
-# 1b. The finished models (models/*.glb, in metres), scaled to mm and placed as
+# 1b. The finished models (models/GLB/*.glb, in metres), scaled to mm and placed as
 #     Translate(loc) . RotateZ . RotateY . RotateX (rot, degrees) . Scale; "hide" drops objects by name prefix,
 #     "color" recolours the whole part. Each part is one label group, named by "name" (default: the model name).
-MODELS = os.environ.get("MODELS", os.path.join(os.path.dirname(ENV["scripts"]), "models"))
+MODELS = os.environ.get("MODELS", os.path.join(os.path.dirname(ENV["scripts"]), "models", "GLB"))
 for p in cfg.get("models", []):
     before = set(bpy.data.objects)
     bpy.ops.import_scene.gltf(filepath=os.path.join(MODELS, p["model"] + ".glb"))

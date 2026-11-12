@@ -19,5 +19,5 @@
  "samples": 160,
  "out": "{out}/images/v3/tactor-parts/pin.png",
  "web_width": 900,
- "model": "{out}/models/pin.glb"
+ "model": "{out}/models/GLB/pin.glb"
 }

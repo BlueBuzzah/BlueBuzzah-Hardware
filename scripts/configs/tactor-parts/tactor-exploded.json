@@ -106,5 +106,5 @@
  },
  "out": "{out}/images/v3/tactor-parts/tactor-exploded.png",
  "web_width": 1800,
- "model": "{out}/models/tactor-exploded.glb"
+ "model": "{out}/models/GLB/tactor-exploded.glb"
 }

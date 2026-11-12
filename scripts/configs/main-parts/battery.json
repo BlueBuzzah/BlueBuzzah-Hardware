@@ -20,5 +20,5 @@
  ],
  "out": "{out}/images/v3/main-parts/battery.png",
  "web_width": 900,
- "model": "{out}/models/battery.glb"
+ "model": "{out}/models/GLB/battery.glb"
 }

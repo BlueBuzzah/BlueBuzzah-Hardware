@@ -37,7 +37,7 @@ Read the [safety page](https://bluebuzzah.com/docs/safety) and the [terms and sa
 | Folder | Description |
 | --- | --- |
 | **[PCB/v3/](PCB/v3/)** | Gerbers, BOM, pick-and-place (CPL), and KiCad sources for the v3 board |
-| **[models/](models/)** | CAD files for the board, tactor and case (`.step`, `.3mf`), a `.stl` for each 3D-printed part, and the `.glb` models used for the build guide's images |
+| **[models/](models/)** | CAD files for the board, tactor and case (`STEP/`), the `.3mf` print file, a `.stl` for each 3D-printed part (`STL/`), and the `.glb` models used for the build guide's images (`GLB/`) |
 | **[scripts/](scripts/)** | Headless Blender scripts that render the build guide's images from those models; see its [README](scripts/README.md) |
 
 ## Getting Started
@@ -80,10 +80,10 @@ Each part of this repository is under the license that fits it. Where two rows o
 
 These third-party files are not relicensed and keep their own licenses:
 
-- `models/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step`: CERN-OHL-P v2, from KiCad's RoyalBlue54L demo.
+- `models/STEP/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step`: CERN-OHL-P v2, from KiCad's RoyalBlue54L demo.
 - `PCB/v3/kicad/3dmodels/ESP32-S3-WROOM-1U.step`: Espressif's vendor model.
 - `PCB/v3/kicad/Libraries/` and the KiCad standard library parts the board uses: the KiCad library license (CC BY-SA 4.0 with KiCad's exception for designs made with them).
 - `scripts/fonts/`: SIL Open Font License (OFL files alongside).
-- The board exports (`PCB/v3/kicad/BlueBuzzah_v3.step`, `models/BlueBuzzah-v3-pcb-model.step`, `models/bluebuzzah-v3-pcb.glb`, `models/bluebuzzah-exploded.glb`) include the part models above, which keep their own licenses.
+- The board exports (`PCB/v3/kicad/BlueBuzzah_v3.step`, `models/STEP/BlueBuzzah-v3-pcb-model.step`, `models/GLB/bluebuzzah-v3-pcb.glb`, `models/GLB/bluebuzzah-exploded.glb`) include the part models above, which keep their own licenses.
 
 The BlueBuzzah and BuzzahBuddy names and logos are not covered by these licenses. See [Licenses and the BlueBuzzah name](https://bluebuzzah.com/terms#licenses).

@@ -19,5 +19,5 @@
  "samples": 160,
  "out": "{out}/images/v3/tactor-parts/lra-sled.png",
  "web_width": 900,
- "model": "{out}/models/lra-sled.glb"
+ "model": "{out}/models/GLB/lra-sled.glb"
 }

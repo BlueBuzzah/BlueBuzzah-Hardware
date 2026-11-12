@@ -20,5 +20,5 @@
  ],
  "out": "{out}/images/v3/main-parts/antenna.png",
  "web_width": 900,
- "model": "{out}/models/antenna.glb"
+ "model": "{out}/models/GLB/antenna.glb"
 }
