@@ -1,16 +1,22 @@
+# Explicit temp directory
+temp/
+
+# Claude Code
+.claude/settings.local.json
+.claude/worktrees
+.worktrees/
+.superpowers
+docs/superpowers
+
 # Python bytecode from tools/
-__pycache__/
+__pycache__
 *.pyc
 
 # macOS
 .DS_Store
 
-.superpowers
-docs/superpowers
 # Renders (published as WebP on BlueBuzzah.com)
 images/
-
-.claude/worktrees/
 
 # KiCad and make_jlcpcb.py
 .venv-kikit/
