@@ -36,7 +36,7 @@ Read the [safety page](https://bluebuzzah.com/docs/safety) and the [terms and sa
 
 | Folder | Description |
 | --- | --- |
-| **[PCB/v3/](PCB/v3/)** | Gerbers, BOM, pick-and-place (CPL), and KiCad sources for the v3 board |
+| **[PCB/v3/](PCB/v3/)** | KiCad sources and the scripts that build the Gerbers, BOM and pick-and-place (CPL) for the v3 board |
 | **[models/](models/)** | CAD files for the board, tactor and case (`STEP/`), the `.3mf` print file, a `.stl` for each 3D-printed part (`STL/`), and the `.glb` models used for the build guide's images (`GLB/`) |
 | **[scripts/](scripts/)** | Headless Blender scripts that render the build guide's images from those models; see its [README](scripts/README.md) |
 
@@ -49,13 +49,13 @@ ordering parts.
 ### Manufacturing the PCB
 
 The [`PCB/v3/`](PCB/v3/) folder contains everything needed for fabrication and
-assembly:
+assembly. The order files aren't kept in the repo; the scripts build them into
+`PCB/v3/build/`:
 
-- `jlc_pcb_gerbers.zip` — Gerber files for PCB manufacturing
-- `BOM_JCLPCB_BlueBuzzah_v3.csv` — bill of materials
-- `CPL_JLCPCB_BlueBuzzah_v3-all-pos.csv` — pick-and-place positions
-- `ORDERING.md` — step-by-step JLCPCB ordering notes
-- `make_jlcpcb.py` — rebuilds these order files from the KiCad sources
+- `make_jlcpcb.py` — builds the JLCPCB order files (Gerber zip, BOM, CPL) into `build/jlcpcb/`
+- `ORDERING-JLCPCB.md` — step-by-step JLCPCB ordering notes
+- `make_pcbway.py` — builds separate PCBWay order files for one board, not panelized, into `build/pcbway/`
+- `ORDERING-PCBWay.md` — step-by-step PCBWay ordering notes
 - `kicad/` — KiCad schematic and PCB source files
 - `panel/` — the KiKit panel the order files are built from
 

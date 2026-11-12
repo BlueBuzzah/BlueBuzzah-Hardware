@@ -1,6 +1,9 @@
 # Explicit temp directory
 temp/
 
+# Build artifacts
+**/build
+
 # Claude Code
 .claude/settings.local.json
 .claude/worktrees
