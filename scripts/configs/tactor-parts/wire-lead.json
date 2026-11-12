@@ -20,5 +20,5 @@
  ],
  "out": "{out}/images/v3/tactor-parts/wire-lead.png",
  "web_width": 900,
- "model": "{out}/models/wire-lead.glb"
+ "model": "{out}/models/GLB/wire-lead.glb"
 }

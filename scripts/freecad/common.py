@@ -3,7 +3,7 @@
 import os, FreeCAD, Import, MeshPart
 HW = os.environ["HW"]                      # BlueBuzzah-Hardware repo checkout
 WORK = os.environ["WORK"]                  # scratch folder for intermediate meshes
-MODELS = os.path.join(HW, "models")
+MODELS = os.path.join(HW, "models", "STEP")
 TACTOR_STEP = os.environ.get("TACTOR_STEP", os.path.join(MODELS, "BlueBuzzah-v3-tactor.step"))
 CASE_STEP = os.environ.get("CASE_STEP", os.path.join(MODELS, "BlueBuzzah-v3-shell.step"))
 

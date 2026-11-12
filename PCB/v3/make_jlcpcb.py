@@ -14,7 +14,7 @@ Steps:
      can't work: the motor connectors overhang the top edge and USB-C/SW1 the bottom
      edge, so the frame stands clear of them and tabs only sit on the left/right edges.
   3. DRC the panel; stop on any error.
-  4. Write the order files next to this script: gerbers + drill (zipped), BOM and CPL.
+  4. Write the order files into build/jlcpcb/: gerbers + drill (zipped), BOM and CPL.
      Designators get the board number (R1_1) so they stay unique if the grid grows.
 """
 import csv, os, re, shutil, subprocess, sys, json, zipfile, collections, tempfile
@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 KICAD_DIR = os.path.join(ROOT, 'kicad')
 BOARD = os.path.join(KICAD_DIR, 'BlueBuzzah_v3.kicad_pcb')
 PANEL_DIR = os.path.join(ROOT, 'panel')
-OUT = ROOT
+OUT = os.path.join(ROOT, 'build', 'jlcpcb')
 VENV = os.path.join(ROOT, '.venv-kikit')
 KIKIT_VERSION = '1.8.1'
 KICAD_PYTHON = os.environ.get(
@@ -169,12 +169,12 @@ def bom_cpl(panel_board, board_w, board_h):
         ref, n = des.split('_')
         return re.sub(r'\d', '', ref), int(re.sub(r'\D', '', ref)), int(n)
     fmt = lambda v: f'{v:.4f}'.rstrip('0').rstrip('.')
-    with open(os.path.join(OUT, 'BOM_JCLPCB_BlueBuzzah_v3.csv'), 'w', newline='') as fh:
+    with open(os.path.join(OUT, 'BlueBuzzah_v3_JLCPCB_BOM.csv'), 'w', newline='') as fh:
         w = csv.writer(fh)
         w.writerow(['Comment', 'Designator', 'Footprint', 'JLCPCB Part #'])
         for (val, fp, lcsc), refs in sorted(rows.items(), key=lambda kv: key(sorted(kv[1], key=key)[0])):
             w.writerow([val, ','.join(sorted(refs, key=key)), fp, lcsc])
-    with open(os.path.join(OUT, 'CPL_JLCPCB_BlueBuzzah_v3-all-pos.csv'), 'w', newline='') as fh:
+    with open(os.path.join(OUT, 'BlueBuzzah_v3_JLCPCB_CPL.csv'), 'w', newline='') as fh:
         w = csv.writer(fh)
         w.writerow(['Designator', 'Mid X', 'Mid Y', 'Rotation', 'Layer'])
         for des, x, y, rot, side in sorted(cpl, key=lambda c: key(c[0])):
@@ -207,7 +207,7 @@ def main():
     drc(panel, parity=False)
 
     os.makedirs(OUT, exist_ok=True)
-    gerbers(panel, os.path.join(OUT, 'jlc_pcb_gerbers.zip'))
+    gerbers(panel, os.path.join(OUT, 'BlueBuzzah_v3_JLCPCB_gerbers.zip'))
     bom_cpl(panel, board_w, board_h)
 
 

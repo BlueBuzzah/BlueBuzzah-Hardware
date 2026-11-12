@@ -19,5 +19,5 @@
  "samples": 160,
  "out": "{out}/images/v3/tactor-parts/finger-cup.png",
  "web_width": 900,
- "model": "{out}/models/finger-cup.glb"
+ "model": "{out}/models/GLB/finger-cup.glb"
 }

@@ -23,5 +23,5 @@
  ],
  "out": "{out}/images/v3/tactor-parts/lra-motor.png",
  "web_width": 900,
- "model": "{out}/models/lra-motor.glb"
+ "model": "{out}/models/GLB/lra-motor.glb"
 }

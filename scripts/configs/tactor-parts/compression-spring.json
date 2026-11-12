@@ -20,5 +20,5 @@
  ],
  "out": "{out}/images/v3/tactor-parts/compression-spring.png",
  "web_width": 900,
- "model": "{out}/models/compression-spring.glb"
+ "model": "{out}/models/GLB/compression-spring.glb"
 }

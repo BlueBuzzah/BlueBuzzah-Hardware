@@ -116,7 +116,7 @@
  },
  "out": "{out}/images/v3/main-parts/bluebuzzah-exploded.png",
  "web_width": 1800,
- "model": "{out}/models/bluebuzzah-exploded.glb",
+ "model": "{out}/models/GLB/bluebuzzah-exploded.glb",
  "model_scale": 1,
  "hook": "{scripts}/configs/main-parts/bluebuzzah-v3-pcb.py"
 }

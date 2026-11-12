@@ -22,6 +22,6 @@
  "hook": "{scripts}/configs/main-parts/bluebuzzah-v3-pcb.py",
  "out": "{out}/images/v3/main-parts/bluebuzzah-v3-pcb.png",
  "web_width": 1800,
- "model": "{out}/models/bluebuzzah-v3-pcb.glb",
+ "model": "{out}/models/GLB/bluebuzzah-v3-pcb.glb",
  "model_scale": 1
 }

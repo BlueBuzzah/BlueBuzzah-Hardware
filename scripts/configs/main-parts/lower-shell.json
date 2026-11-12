@@ -17,5 +17,5 @@
  "samples": 160,
  "out": "{out}/images/v3/main-parts/lower-shell.png",
  "web_width": 900,
- "model": "{out}/models/lower-shell.glb"
+ "model": "{out}/models/GLB/lower-shell.glb"
 }

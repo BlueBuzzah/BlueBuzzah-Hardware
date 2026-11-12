@@ -17,5 +17,5 @@
  "samples": 160,
  "out": "{out}/images/v3/main-parts/upper-shell.png",
  "web_width": 900,
- "model": "{out}/models/upper-shell.glb"
+ "model": "{out}/models/GLB/upper-shell.glb"
 }

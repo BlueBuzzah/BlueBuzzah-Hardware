@@ -3,7 +3,7 @@
 
     python3 make_pcbway.py
 
-Needs KiCad 10. Writes pcbway/BlueBuzzah_v3_gerbers.zip, _BOM.csv and _centroid.csv,
+Needs KiCad 10. Writes build/pcbway/BlueBuzzah_v3_PCBWay_gerbers.zip, _BOM.csv and _centroid.csv,
 and doesn't touch the JLCPCB package.
 
 The JLCPCB files can't be reused: they come from the panel, and the CPL is corrected for
@@ -27,8 +27,8 @@ except ImportError:
         sys.exit(f'pcbnew not found in {KICAD_PYTHON}; set KICAD_PYTHON')
     os.execv(KICAD_PYTHON, [KICAD_PYTHON, os.path.abspath(__file__)])
 
-OUT = os.path.join(ROOT, 'pcbway')
-NAME = 'BlueBuzzah_v3'
+OUT = os.path.join(ROOT, 'build', 'pcbway')
+NAME = 'BlueBuzzah_v3_PCBWay'
 LAYERS = GERBER_LAYERS.replace('B.Paste,', '')  # every part is on top
 RES_NOTE = 'Any 1% 0402 equivalent is OK.'
 

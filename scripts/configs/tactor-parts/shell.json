@@ -19,5 +19,5 @@
  "samples": 160,
  "out": "{out}/images/v3/tactor-parts/shell.png",
  "web_width": 900,
- "model": "{out}/models/shell.glb"
+ "model": "{out}/models/GLB/shell.glb"
 }

@@ -31,7 +31,7 @@ if not os.path.isdir(os.path.join(WORK, "tactor")):
         run([f"{FC}/freecadcmd", "-c", f"exec(open({os.path.join(HERE, 'freecad', script + '.py')!r}).read())"])
     run([f"{FC}/freecad", os.path.join(HERE, "freecad", "pcb2glb.py")], QT_QPA_PLATFORM="offscreen")  # the v3 board
     run([f"{FC}/freecad", os.path.join(HERE, "freecad", "pcb2glb.py")], QT_QPA_PLATFORM="offscreen",  # its USB-C
-        BOARD_STEP=os.path.join(env["HW"], "models", "USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"), GLB_NAME="usb-c")
+        BOARD_STEP=os.path.join(env["HW"], "models", "STEP", "USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"), GLB_NAME="usb-c")
 
 # 2. Each config: render, label, resize for the web, export the .glb model
 words = sys.argv[1:]

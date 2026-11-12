@@ -19,5 +19,5 @@
  "samples": 160,
  "out": "{out}/images/v3/tactor-parts/wire-plug.png",
  "web_width": 900,
- "model": "{out}/models/wire-plug.glb"
+ "model": "{out}/models/GLB/wire-plug.glb"
 }
