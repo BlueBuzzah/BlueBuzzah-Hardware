@@ -46,6 +46,10 @@ The complete, step-by-step build guide lives at
 **[bluebuzzah.com/docs](https://bluebuzzah.com/docs/)** — start there before
 ordering parts.
 
+Each [release](https://github.com/BlueBuzzah/BlueBuzzah-Hardware/releases) includes
+two zips: `BlueBuzzah-v3-PCB.zip` holds the built JLCPCB and PCBWay order files,
+and `BlueBuzzah-v3-parts.zip` holds every 3D-printed part.
+
 ### Manufacturing the PCB
 
 The [`PCB/v3/`](PCB/v3/) folder contains everything needed for fabrication and

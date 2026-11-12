@@ -15,9 +15,11 @@ Sources and build scripts for the BlueBuzzah v3 PCB, built around the JLCPCB-ass
 
 ## Ordering the Board
 
-Follow [ORDERING-JLCPCB.md](ORDERING-JLCPCB.md) to order the board fully assembled from JLCPCB. The panel holds one board, so the panel quantity is the board quantity.
+Download `BlueBuzzah-v3-PCB.zip` from the latest [release](https://github.com/BlueBuzzah/BlueBuzzah-Hardware/releases). It holds the built order files and these ordering notes.
 
-To order from PCBWay instead, follow [ORDERING-PCBWay.md](ORDERING-PCBWay.md). Those files describe the bare board, with no panel. Don't mix them with the JLCPCB files.
+Follow [ORDERING-JLCPCB.md](ORDERING-JLCPCB.md), in the zip's `JLCPCB` folder, to order the board fully assembled from JLCPCB. The panel holds one board, so the panel quantity is the board quantity.
+
+To order from PCBWay instead, follow [ORDERING-PCBWay.md](ORDERING-PCBWay.md), in the zip's `PCBWay` folder. Those files describe the bare board, with no panel. Don't mix them with the JLCPCB files.
 
 ## Recovering a Board
 
@@ -32,6 +34,8 @@ Sliding the switch off signals the firmware at once and cuts the 3.3 V supply in
 
 ## Building the Order Files
 
+Each release includes these files already built, in `BlueBuzzah-v3-PCB.zip`. To build them yourself:
+
 Install KiCad 10, quit it, then run:
 
 ```bash
@@ -41,3 +45,5 @@ python3 make_jlcpcb.py
 The script checks the board and panel with DRC, then rewrites the panel and writes the three order files to `build/jlcpcb/`. Check any new package in JLCPCB's placement preview before ordering.
 
 The PCBWay files are separate. Run `python3 make_pcbway.py` to build them into `build/pcbway/`.
+
+If a part goes out of stock, don't substitute it on the order. Update it in `make_jlcpcb.py` or `make_pcbway.py`, rebuild, and check the new part in the placement preview.

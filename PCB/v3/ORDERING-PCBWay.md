@@ -1,6 +1,6 @@
 # Ordering assembled boards from PCBWay
 
-Use the three order files in `build/pcbway/` together, unchanged. They aren't kept in the repo, so build them first (see [Building the Files](#building-the-files)). They describe one bare board with no panel. The JLCPCB files in `build/jlcpcb/` are a separate package, described in [ORDERING-JLCPCB.md](ORDERING-JLCPCB.md), so don't mix the two.
+Use the three order files in this folder together, unchanged. They describe one bare board with no panel. The files in the `JLCPCB` folder are a separate package for JLCPCB, described in `JLCPCB/ORDERING-JLCPCB.md`, so don't mix the two.
 
 | File | Description |
 | --- | --- |
@@ -37,14 +37,10 @@ U1's pads are narrowed to 0.30 mm, from the 0.35 mm in KiCad's library, so they 
 
 U21 pad 2 and U23 pad 2 each have a 0.2 mm via in the pad, because neither has room to move it. They're unfilled, like the board's other vias, so tell PCBWay they're intentional if it asks.
 
-The BOM's notes list checked alternates for D1, C17, R60, R61, R64, R67 and R68, and allow any 1% 0402 equivalent for every resistor. Don't substitute J1 to J6: the battery polarity was confirmed with the HDGC2001WR-2P, and another header might seat the plug differently. For any other part PCBWay can't source, change it in `make_pcbway.py` and rebuild, so the files stay correct for the next order.
+The BOM's notes list checked alternates for D1, C17, R60, R61, R64, R67 and R68, and allow any 1% 0402 equivalent for every resistor. Don't substitute J1 to J6: the battery polarity was confirmed with the HDGC2001WR-2P, and another header might seat the plug differently. For any other part PCBWay can't source, check for a newer release of these files, or [open an issue](https://github.com/BlueBuzzah/BlueBuzzah-Hardware/issues).
 
 ## Panel Note
 
 PCBWay adds two break-away rails to SMT orders by default. This board needs them on the left and right edges, because the connectors overhang the top and bottom. It's also smaller than PCBWay's published 50 × 50 mm assembly minimum and has no fiducials of its own, so confirm the rails with PCBWay before ordering, and include this note in the remarks:
 
 > The connectors overhang the board's top edge by about 2 mm and its bottom edge by about 1.5 mm, so please don't V-cut, and don't put rails on those edges. Put the rails on the left and right edges, joined by mouse-bite tabs. U20 sits 0.3 mm from the left edge and the pads of C43 and C44 sit 0.43 mm from it, so put the left tabs in the top 14 mm of that edge, viewed from the top side. The board has no fiducials, so please put them on the rails.
-
-## Building the Files
-
-Install KiCad 10, then run `python3 make_pcbway.py` from `PCB/v3`. It writes the three order files to `build/pcbway/`.

@@ -1,6 +1,6 @@
 # Ordering assembled boards from JLCPCB
 
-Use the three order files in `build/jlcpcb/` together, unchanged. They aren't kept in the repo, so build them first (see [Building the Files](#building-the-files)). They describe one board inside a 72 × 72 mm production panel, so the panel quantity is the board quantity. The PCBWay files in `build/pcbway/` are a separate package, described in [ORDERING-PCBWay.md](ORDERING-PCBWay.md), so don't mix the two.
+Use the three order files in this folder together, unchanged. They describe one board inside a 72 × 72 mm production panel, so the panel quantity is the board quantity. The files in the `PCBWay` folder are a separate package for PCBWay, described in `PCBWay/ORDERING-PCBWAY.md`, so don't mix the two.
 
 | File | Description |
 | --- | --- |
@@ -30,9 +30,9 @@ Use the three order files in `build/jlcpcb/` together, unchanged. They aren't ke
 2. Turn on PCB Assembly, choose Standard, and assemble the top side. The board has 28 unique parts, 76 SMT parts and 7 through-hole parts (J1 to J6 and SW1).
 3. Upload `BlueBuzzah_v3_JLCPCB_BOM.csv` and `BlueBuzzah_v3_JLCPCB_CPL.csv`, and choose **Complete File, just proceed with my own files**.
 4. On the Bill of Materials step, tick **D1**. JLCPCB requires this for the LED because it's moisture sensitive, and the order can't continue until it's ticked.
-5. On the Component Placements step, check the 2D view. Each part's pin-1 dot should sit at the silkscreen mark. Don't rotate or move parts here: if something looks wrong, fix the files instead, so every order gets the same placement.
+5. On the Component Placements step, check the 2D view. Each part's pin-1 dot should sit at the silkscreen mark. Don't rotate or move parts here: if something looks wrong, [open an issue](https://github.com/BlueBuzzah/BlueBuzzah-Hardware/issues) so the files get fixed for every order.
 6. If the order page offers **Confirm Production file**, choose Yes.
-7. After ordering, open the order in Order History and check the production files: the 2D file for SMD placement and polarity, and the 3D file for through-hole parts. An order can't be canceled once PCB production starts. Check these in particular, because none of their packages is in the script's rotation table, so JLCPCB's default orientation is what's used:
+7. After ordering, open the order in Order History and check the production files: the 2D file for SMD placement and polarity, and the 3D file for through-hole parts. An order can't be canceled once PCB production starts. Check these in particular, because their placement uses JLCPCB's default orientation:
    - D2: the placement preview shows no polarity mark for it. Its cathode (pad 1) belongs at the closed end of the silkscreen outline, toward the bottom of the board.
    - U1 (LGA-14): pin 1 at the dot in the preview. The part itself has no mark.
    - D1: the LED's notched corner.
@@ -40,8 +40,4 @@ Use the three order files in `build/jlcpcb/` together, unchanged. They aren't ke
 
 U21 pad 2 and U23 pad 2 each have a 0.2 mm via in the pad, because neither has room to move it. They're unfilled, like the board's other vias, so tell JLCPCB they're intentional if it asks.
 
-If JLCPCB says a part is out of stock, don't substitute it on the order. Update the part in `make_jlcpcb.py`, rebuild the files, and check the new part in the placement preview.
-
-## Building the Files
-
-Install KiCad 10, quit it, then run `python3 make_jlcpcb.py` from `PCB/v3`. The script checks the board and the panel with DRC, then rewrites the panel in `panel/` and writes the three order files to `build/jlcpcb/`.
+If JLCPCB says a part is out of stock, don't substitute it on the order. Check for a newer release of these files, or [open an issue](https://github.com/BlueBuzzah/BlueBuzzah-Hardware/issues).
