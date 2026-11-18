@@ -37,7 +37,7 @@ Read the [safety page](https://bluebuzzah.com/docs/safety) and the [terms and sa
 | Folder | Description |
 | --- | --- |
 | **[PCB/v3/](PCB/v3/)** | KiCad sources and the scripts that build the Gerbers, BOM and pick-and-place (CPL) for the v3 board |
-| **[models/](models/)** | CAD files for the board, tactor and case (`STEP/`), the `.3mf` print file, a `.stl` for each 3D-printed part (`STL/`), and the `.glb` models used for the build guide's images (`GLB/`) |
+| **[models/](models/)** | CAD files for the board, tactor and case (`STEP/`), the case's FreeCAD project (`FreeCAD/`), the `.3mf` print file, a `.stl` for each 3D-printed part (`STL/`), and the `.glb` models used for the build guide's images (`GLB/`) |
 | **[scripts/](scripts/)** | Headless Blender scripts that render the build guide's images from those models; see its [README](scripts/README.md) |
 
 ## Getting Started

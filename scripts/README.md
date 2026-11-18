@@ -50,7 +50,7 @@ The unlabeled exploded renders (`tactor-exploded.png`, `bluebuzzah-exploded.png`
 | `builders/` | Models built in code: LRA motor, compression spring, wire lead, battery, antenna, M2 screw, and a stand-in for the board's power switch |
 | `freecad/` | STEP-to-mesh exports, and the board STEP-to-colored-`.glb` conversion |
 | `labels/` | Number and name for each part in the two exploded views |
-| `fonts/` | Lexend and Atkinson Hyperlegible Next for the labels (SIL Open Font License) |
+| `fonts/` | Lexend and Atkinson Hyperlegible Next for the labels (SIL Open Font License). The Lexend `.ttf` is the same font for the case's FreeCAD project, which can't read `.woff2` |
 
 ## Modelling notes
 
