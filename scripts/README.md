@@ -2,7 +2,7 @@
 
 These scripts rebuild the v3 renders in `images/v3/` and the `.glb` models in `models/GLB/` from the CAD files in `models/STEP/`. Everything runs headless; no app windows open.
 
-Rendered images in `images/` aren't committed. The published copies are WebP files on BlueBuzzah.com, in `src/public/docs/img/` of the [BlueBuzzah.com](https://github.com/BlueBuzzah/BlueBuzzah.com) repository; convert new renders as its `CLAUDE.md` describes.
+Rendered images in `images/` aren't committed. The published copies are WebP files on BlueBuzzah.com, in `src/public/docs/img/` of the [BlueBuzzah.com](https://github.com/BlueBuzzah/BlueBuzzah.com) repository; `publish_images.py` updates them, and the hero image on each website, from the renders here.
 
 ## Requirements
 
@@ -17,6 +17,7 @@ Rendered images in `images/` aren't committed. The published copies are WebP fil
 python3 scripts/render_all.py                    # rebuild everything into this checkout
 python3 scripts/render_all.py battery pin        # only images whose name contains one of these words
 OUT=/tmp/preview BB_SAMPLES=16 python3 scripts/render_all.py   # quick, low-quality preview elsewhere
+python3 scripts/publish_images.py upper-shell hero   # copy those renders into the website checkouts as WebP
 ```
 
 Each run:
@@ -45,6 +46,7 @@ The unlabeled exploded renders (`tactor-exploded.png`, `bluebuzzah-exploded.png`
 | Path | What it is |
 | --- | --- |
 | `render_all.py` | Runs every step above |
+| `publish_images.py` | Converts renders to WebP (needs `cwebp`) and replaces the matching images in the BlueBuzzah.com and BuzzahBuddy.com checkouts next to this one (or under `SITES`). It commits nothing |
 | `brender.py` | Renders one config, or exports it as `.glb` (`BB_MODE=model`) |
 | `configs/<folder>/<image>.json` | One file per published image: parts, colors, camera, layout offsets, output paths |
 | `builders/` | Models built in code: LRA motor, compression spring, wire lead, battery, antenna, M2 screw, and a stand-in for the board's power switch |
