@@ -35,7 +35,9 @@ if not os.path.isdir(os.path.join(WORK, "tactor")):
 
 # 2. Each config: render, label, resize for the web, export the .glb model
 words = sys.argv[1:]
-for path in sorted(glob.glob(os.path.join(HERE, "configs", "*", "*.json"))):
+configs = glob.glob(os.path.join(HERE, "configs", "*", "*.json"))
+# Configs that export a .glb go first: the assembly and product renders load those models from models/GLB/.
+for path in sorted(configs, key=lambda p: ("model" not in json.load(open(p)), p)):
     name = os.path.basename(path)[:-5]
     if words and not any(w in name for w in words):
         continue
